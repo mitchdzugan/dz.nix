@@ -11,9 +11,6 @@ attrs: ({ mk-home-manager = ((import ./home.nix) attrs); } // (
               username = "dz";
               homeDirectory = "/home/dz";
               stateVersion = "25.11";
-              checkouts = {
-                dz-nix = "/home/dz/Projects/dz.nix";
-              };
               defaultNixGLWrapper = "mesa";
             }
           EOF
@@ -29,9 +26,9 @@ attrs: ({ mk-home-manager = ((import ./home.nix) attrs); } // (
                 home-manager.inputs.nixpkgs.follows = "nixpkgs";
           EOF
             if [[ "$1" != "" ]]; then
-              echo 'dz-nix.url = "github:mitchdzugan/dz.nix";'
+              echo '      dz-nix.url = "github:mitchdzugan/dz.nix";'
             else
-              echo "dz-nix.url = \"path:$DZ_NIX_CHECKOUT_PATH\";"
+              echo '      dz-nix.url = "path:./dz.nix";'
             fi
             cat << EOF
                 dz-nix.inputs.nixpkgs.follows = "nixpkgs";

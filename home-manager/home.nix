@@ -2,8 +2,9 @@ inputs@{ nixpkgs, plasma-manager, nixgl, nur, utils, neovim, ... }:
 this:
 { config, lib, pkgs, ... }:
 let
+  dz-nix-path = this.homeDirectory + "/.config/home-manager/dz.nix";
   mkDomainSymlink = rel: (
-    config.lib.file.mkOutOfStoreSymlink (this.checkouts.dz-nix + "/home-manager/domain/" + rel)
+    config.lib.file.mkOutOfStoreSymlink (dz-nix-path + "/home-manager/domain/" + rel)
   );
   getEnvExtra = ({ env ? {}, ... }: env);
   envExtra = getEnvExtra this;
@@ -169,9 +170,9 @@ in {
     };
   };
   home.sessionVariables = envExtra // {
-    DZ_NIX_CHECKOUT_PATH = this.checkouts.dz-nix;
-    DZ_NVIM_CONFIG_CHECKOUT_PATH = this.checkouts.dz-nix + "/neovim";
-    DZ_HOME_MANAGER_CHECKOUT_PATH = this.checkouts.dz-nix + "/home-manager";
+    DZ_NIX_CHECKOUT_PATH = dz-nix-path;
+    DZ_NVIM_CONFIG_CHECKOUT_PATH = dz-nix-path + "/neovim";
+    DZ_HOME_MANAGER_CHECKOUT_PATH = dz-nix-path + "/home-manager";
   };
   home.pointerCursor = {
     # gtk.enable = true;
