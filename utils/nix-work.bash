@@ -30,12 +30,17 @@ cd $WD || exit
 #
 #### /END  UNUSED WITH NEW METHOD FOR RELOADING
 
-echo "function nix-reload"     > $WD/source.fish
-echo "  cd $WD/project"        >> $WD/source.fish
-echo "  nix flake update"      >> $WD/source.fish
-echo "  echo reload > $WD/cmd" >> $WD/source.fish
-echo "  exit 0"                >> $WD/source.fish
-echo "end"                     >> $WD/source.fish
+# set -lx ZDEV_NIXROOT $nixroot_data[2]
+# set -lx ZDEV_LABEL (basename $ZDEV_NIXROOT)
+
+echo "function nix-reload"                               > $WD/source.fish
+echo "  cd $WD/project"                                 >> $WD/source.fish
+echo "  nix flake update"                               >> $WD/source.fish
+echo "  echo reload > $WD/cmd"                          >> $WD/source.fish
+echo "  exit 0"                                         >> $WD/source.fish
+echo "end"                                              >> $WD/source.fish
+echo "set -lx ZDEV_NIXROOT \$(readlink -f ./)"          >> $WD/source.fish
+echo "set -lx ZDEV_LABEL (basename \$(readlink -f ./))" >> $WD/source.fish
 
 function launch_shell {
   sh -c "cd $WD/project && nix develop --command fish -C 'cd \$(readlink -f ./)' -C 'source $WD/source.fish' -C pwd -C 'git status' -C 'echo welcome to flake project'"
