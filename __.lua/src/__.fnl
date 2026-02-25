@@ -1,0 +1,10 @@
+(local _ (require :core))
+(local class (require :class))
+(local dbg (require :dbg))
+(local Maybe (require :Maybe))
+(local Map (require :Map))
+(local Enum (require :Enum))
+(local module_ (require :module))
+(local im (require :im))
+
+(_.assign {: _ : im : Maybe : Map : Enum} dbg class module_ _)

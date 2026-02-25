@@ -1,16 +1,4 @@
-{
-  description = "Empty Template";
-
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
-  };
-
-  outputs = {
-    nixpkgs,
-    flake-utils,
-    ...
-  }:
+{ nixpkgs, flake-utils, ... }:
   let
     _pkgs = (import nixpkgs {});
     fetchFromGitHub = { owner, repo, rev, sha256 }: (
@@ -288,5 +276,4 @@
       (if (builtins.isPath arg1)
         then (mkZnFnlImpl {} arg1)
         else (srcPath: (mkZnFnlImpl arg1 srcPath)));
-  };
-}
+  }

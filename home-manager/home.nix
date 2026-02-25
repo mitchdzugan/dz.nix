@@ -1,4 +1,4 @@
-inputs@{ nixpkgs, plasma-manager, nixgl, nur, mitch-utils, nvim-config, ... }:
+inputs@{ nixpkgs, plasma-manager, nixgl, nur, utils, neovim, ... }:
 this:
 { config, lib, pkgs, ... }:
 let
@@ -112,13 +112,13 @@ in {
     zkmPkg
     (mkZkm "home.zkm" ./zkm/home.clj)
     # luajit
-    # (nvim-config.mkPkg pkgs)
+    # (neovim.mkPkg pkgs)
     (config.lib.nixGL.wrap pkgs.kitty)
     (config.lib.nixGL.wrap pkgs.vesktop)
     (config.lib.nixGL.wrap pkgs.pear-desktop)
     (config.lib.nixGL.wrap pkgs.neovide)
-    # (mitch-utils.mkFnlFmt luajit)
-    (mitch-utils.mkNixWork pkgs)
+    # (utils.mkFnlFmt luajit)
+    (utils.mkNixWork pkgs)
     (zn.writeBashScriptBin "lvim" ''
       export DZ_NVIM_CONFIG_USE_LOCAL=no
       nvim "$@"
@@ -309,8 +309,8 @@ in {
   programs.fish = import ./domain/fish/hm.nix { lib = lib; pkgs = pkgs; };
   programs.neovim = (
     let
-      nvimConfigPkg = (nvim-config.mkPkg pkgs);
-      shCore = pkgs.writeText "shCore" (nvim-config.mkShellHook pkgs);
+      nvimConfigPkg = (neovim.mkPkg pkgs);
+      shCore = pkgs.writeText "shCore" (neovim.mkShellHook pkgs);
       shPost = pkgs.writeText "shPost" ''
         # if [[ "$DZ_NVIM_CONFIG_USE_LOCAL" != "no" ]]; then
         export DZ_NVIM_CONFIG_USE_LOCAL=yes
@@ -325,7 +325,7 @@ in {
         postInstall = ''
           mv $out/bin/nvim $out/bin/nvim-true-bin
           echo 'vimRunDir="$(pwd)"'                                  > $out/bin/nvim
-          cat ${pkgs.writeText "hk" (nvim-config.mkShellHook pkgs)} >> $out/bin/nvim
+          cat ${pkgs.writeText "hk" (neovim.mkShellHook pkgs)}      >> $out/bin/nvim
           cat ${shPost}                                             >> $out/bin/nvim
           echo $out/bin/nvim-true-bin '"$@"'                        >> $out/bin/nvim
           chmod +x $out/bin/nvim
