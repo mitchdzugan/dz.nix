@@ -3,7 +3,7 @@ this:
 { config, lib, pkgs, ... }:
 let
   mkDomainSymlink = rel: (
-    config.lib.file.mkOutOfStoreSymlink (this.checkouts.dz-home-manager + "/domain/" + rel)
+    config.lib.file.mkOutOfStoreSymlink (this.checkouts.dz-nix + "/home-manager/domain/" + rel)
   );
   getEnvExtra = ({ env ? {}, ... }: env);
   envExtra = getEnvExtra this;
@@ -137,7 +137,7 @@ in {
       rofi -matching fuzzy -sorting-method fzf -sort -dmenu "$@"
     '')
     (zn.writeBashScriptBin "dz-hm" ''
-      nix run "path:$DZ_HOME_MANAGER_CHECKOUT_PATH" -- "$@"
+      nix run "path:$DZ_NIX_CHECKOUT_PATH" -- "$@"
     '')
     (zn.writeBashScriptBin "ssh-adhdz" ''
       gcloud compute ssh \
@@ -169,8 +169,9 @@ in {
     };
   };
   home.sessionVariables = envExtra // {
-    DZ_NVIM_CONFIG_CHECKOUT_PATH = this.checkouts.dz-nvim-config;
-    DZ_HOME_MANAGER_CHECKOUT_PATH = this.checkouts.dz-home-manager;
+    DZ_NIX_CHECKOUT_PATH = this.checkouts.dz-nix;
+    DZ_NVIM_CONFIG_CHECKOUT_PATH = this.checkouts.dz-nix + "/neovim";
+    DZ_HOME_MANAGER_CHECKOUT_PATH = this.checkouts.dz-nix + "/home-manager";
   };
   home.pointerCursor = {
     # gtk.enable = true;

@@ -12,8 +12,7 @@ attrs: ({ mk-home-manager = ((import ./home.nix) attrs); } // (
               homeDirectory = "/home/dz";
               stateVersion = "25.11";
               checkouts = {
-                dz-home-manager = "/home/dz/Projects/dz.home-manager/";
-                dz-nvim-config = "/home/dz/Projects/nvim-config/";
+                dz-nix = "/home/dz/Projects/dz.nix";
               };
               defaultNixGLWrapper = "mesa";
             }
@@ -30,17 +29,17 @@ attrs: ({ mk-home-manager = ((import ./home.nix) attrs); } // (
                 home-manager.inputs.nixpkgs.follows = "nixpkgs";
           EOF
             if [[ "$1" != "" ]]; then
-              echo 'dz-home-manager.url = "github:mitchdzugan/dz.home-manager";'
+              echo 'dz-nix.url = "github:mitchdzugan/dz.nix";'
             else
-              echo "dz-home-manager.url = \"path:$DZ_HOME_MANAGER_CHECKOUT_PATH\";"
+              echo "dz-nix.url = \"path:$DZ_NIX_CHECKOUT_PATH\";"
             fi
             cat << EOF
-                dz-home-manager.inputs.nixpkgs.follows = "nixpkgs";
+                dz-nix.inputs.nixpkgs.follows = "nixpkgs";
               };
-              outputs = { nixpkgs, home-manager, dz-home-manager, ... }: {
+              outputs = { nixpkgs, home-manager, dz-nix, ... }: {
                 homeConfigurations."dz" = home-manager.lib.homeManagerConfiguration {
                   pkgs = nixpkgs.legacyPackages.x86_64-linux;
-                  modules = [(dz-home-manager.hmModule (import ./this.nix))];
+                  modules = [(dz-nix.mk-home-manager (import ./this.nix))];
                 };
               };
             }
