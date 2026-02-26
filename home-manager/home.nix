@@ -3,8 +3,12 @@ this:
 { config, lib, pkgs, ... }:
 let
   dz-nix-path = this.homeDirectory + "/.config/home-manager/dz.nix";
+  dz-neovim-path = dz-nix-path + "/neovim";
+  dz-hm-path = dz-nix-path + "/home-manager";
+  get-zkm-path = rest: dz-hm-path + "/zkm/" + rest + ".clj";
+  get-domain-path = rest: dz-hm-path + "/domain/" + rest;
   mkDomainSymlink = rel: (
-    config.lib.file.mkOutOfStoreSymlink (dz-nix-path + "/home-manager/domain/" + rel)
+    config.lib.file.mkOutOfStoreSymlink (get-domain-path rel)
   );
   getEnvExtra = ({ env ? {}, ... }: env);
   envExtra = getEnvExtra this;
@@ -111,7 +115,7 @@ in {
     (config.lib.nixGL.wrap inputs.zkg.packages.${pkgs.hostPlatform.system}.zkg)
     (config.lib.nixGL.wrap inputs.ztr.packages.${pkgs.hostPlatform.system}.ztr)
     zkmPkg
-    (mkZkm "home.zkm" ./zkm/home.clj)
+    (mkZkm "home.zkm" (get-zkm-path "home"))
     # luajit
     # (neovim.mkPkg pkgs)
     (config.lib.nixGL.wrap pkgs.kitty)
@@ -171,8 +175,8 @@ in {
   };
   home.sessionVariables = envExtra // {
     DZ_NIX_CHECKOUT_PATH = dz-nix-path;
-    DZ_NVIM_CONFIG_CHECKOUT_PATH = dz-nix-path + "/neovim";
-    DZ_HOME_MANAGER_CHECKOUT_PATH = dz-nix-path + "/home-manager";
+    DZ_NVIM_CONFIG_CHECKOUT_PATH = dz-neovim-path;
+    DZ_HOME_MANAGER_CHECKOUT_PATH = dz-hm-path;
   };
   home.pointerCursor = {
     # gtk.enable = true;

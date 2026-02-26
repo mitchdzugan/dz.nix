@@ -36,7 +36,10 @@
     in home-manager // { __ = __; utils = utils;  } // (
       inputs.flake-utils.lib.eachDefaultSystem (system: (
         let pkgs = inputs.nixpkgs.legacyPackages.${system}; in {
+          devShells.default = __.mkDevShell pkgs;
+          devShells.neovim = neovim.mkDevShell pkgs;
           devShells."__" = __.mkDevShell pkgs;
+          devShells."home-manager" = home-manager.mkDevShell pkgs;
         }
       ))
     )

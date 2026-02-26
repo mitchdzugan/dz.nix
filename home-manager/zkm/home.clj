@@ -17,8 +17,22 @@
   (->> (concat ["ls /VOID/ssbm/iso | rofi-dmenu | pipe-exec"] (melee "~%"))
        (into [])))
 
-(defn nvim-proj-cmd [proj-dir]
-  (str "bash -c \"cd " proj-dir " && nix develop .#__ --command gvim\""))
+(defn nix-develop [& args]
+  (let [[cmd proj-dir attr] args]
+    (str "bash -c \"cd "
+             proj-dir
+             " && nix develop"
+             (if attr (str " .#" attr) "")
+             " --command "
+             cmd
+             "\"")))
+
+(defn dz-nix-develop [& args]
+  (let [[cmd sub-proj] args]
+    (nix-develop cmd (str "$DZ_NIX_CHECKOUT_PATH/" (or sub-proj ".")) sub-proj)))
+
+(defn dz-nix-gvim [& args] (apply dz-nix-develop "gvim" args))
+(defn dz-nix-kitty [& args] (apply dz-nix-develop "kitty" args))
 
 (Title "dz system")
 (Cmd :w "open web browser [firefox]" "firefox")
@@ -27,8 +41,14 @@
 (Cmd :a:m "play melee (select iso)" pick-melee)
 (Cmd :c:m "play melee (unclepunch)" (melee uncle-punch))
 (Cmd :s:M "open slippi launcher" "/home/dz/Downloads/Slippi-Launcher-2.13.3-x86_64.AppImage")
+(Col)
+(Sub :k "kitty projects"
+  (Cmd :n "dz-nix" (dz-nix-kitty))
+  (Cmd :v "nvim-config" (dz-nix-kitty "neovim"))
+  (Cmd :h "home-manager" (dz-nix-kitty "home-manager"))
+  (Cmd :s:minus "__.lua" (dz-nix-kitty "__")))
 (Sub :v "neovim projects"
-  (Cmd :n "dz-nix" (nvim-proj-cmd "$DZ_NIX_CHECKOUT_PATH"))
-  (Cmd :v "nvim-config" (nvim-proj-cmd "$DZ_NIX_CHECKOUT_PATH/neovim"))
-  (Cmd :h "home-manager" (nvim-proj-cmd "$DZ_NIX_CHECKOUT_PATH/home-manager"))
-  (Cmd :s:minus "__.lua" (nvim-proj-cmd "$DZ_NIX_CHECKOUT_PATH/__.lua")))
+  (Cmd :n "dz-nix" (dz-nix-gvim))
+  (Cmd :v "nvim-config" (dz-nix-gvim "neovim"))
+  (Cmd :h "home-manager" (dz-nix-gvim "home-manager"))
+  (Cmd :s:minus "__.lua" (dz-nix-gvim "__")))
