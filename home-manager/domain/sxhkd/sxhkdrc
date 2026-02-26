@@ -6,3 +6,6 @@ super + slash
 
 super + w
   firefox
+
+super + space
+  home.zkm

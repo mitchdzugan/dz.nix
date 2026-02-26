@@ -17,6 +17,9 @@
   (->> (concat ["ls /VOID/ssbm/iso | rofi-dmenu | pipe-exec"] (melee "~%"))
        (into [])))
 
+(defn nvim-proj-cmd [proj-dir]
+  (str "bash -c \"cd " proj-dir " && nix develop .#__.lua --command gvim\""))
+
 (Title "dz system")
 (Cmd :w "open web browser [firefox]" "firefox")
 (Cmd :return "open terminal" "kitty")
@@ -24,3 +27,8 @@
 (Cmd :a:m "play melee (select iso)" pick-melee)
 (Cmd :c:m "play melee (unclepunch)" (melee uncle-punch))
 (Cmd :s:M "open slippi launcher" "/home/dz/Downloads/Slippi-Launcher-2.13.3-x86_64.AppImage")
+(Sub :v "neovim projects"
+  (Cmd :n "dz-nix" (nvim-proj-cmd "$DZ_NIX_CHECKOUT_PATH"))
+  (Cmd :v "nvim-config" (nvim-proj-cmd "$DZ_NIX_CHECKOUT_PATH/neovim"))
+  (Cmd :h "home-manager" (nvim-proj-cmd "$DZ_NIX_CHECKOUT_PATH/home-manager"))
+  (Cmd :s:minus "__.lua" (nvim-proj-cmd "$DZ_NIX_CHECKOUT_PATH/__.lua")))
