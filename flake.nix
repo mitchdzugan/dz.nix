@@ -32,14 +32,16 @@
       inputs-utils-__ = inputs-utils // { __ = __; };
       neovim = (import ./neovim) inputs-utils-__;
       inputs-utils-neovim =inputs-utils // { neovim = neovim; };
+      free-dom = (import ./free-dom) inputs-utils-__;
       home-manager = (import ./home-manager) inputs-utils-neovim;
-    in home-manager // { __ = __; utils = utils;  } // (
+    in home-manager // { __ = __; utils = utils; free-dom = free-dom; } // (
       inputs.flake-utils.lib.eachDefaultSystem (system: (
         let pkgs = inputs.nixpkgs.legacyPackages.${system}; in {
           devShells.default = __.mkDevShell pkgs;
           devShells.neovim = neovim.mkDevShell pkgs;
           devShells."__" = __.mkDevShell pkgs;
-          devShells."home-manager" = home-manager.mkDevShell pkgs;
+          devShells."free-dom" = free-dom.mkDevShell pkgs;
+          devShells."home-manager" = neovim.mkDevShell pkgs;
         }
       ))
     )

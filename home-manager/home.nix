@@ -287,7 +287,7 @@ in {
         extensions.packages = with nurRepos.rycee.firefox-addons; [
           dracula-dark-colorscheme
           ublock-origin
-          video-downloadhelper
+          # video-downloadhelper
         ];
       };
     };

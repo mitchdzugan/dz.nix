@@ -44,11 +44,13 @@
 (Col)
 (Sub :k "kitty projects"
   (Cmd :n "dz-nix" (dz-nix-kitty))
+  (Cmd :f "free-dom" (dz-nix-kitty "free-dom"))
   (Cmd :v "nvim-config" (dz-nix-kitty "neovim"))
   (Cmd :h "home-manager" (dz-nix-kitty "home-manager"))
   (Cmd :s:minus "__.lua" (dz-nix-kitty "__")))
 (Sub :v "neovim projects"
   (Cmd :n "dz-nix" (dz-nix-gvim))
+  (Cmd :f "free-dom" (dz-nix-gvim "free-dom"))
   (Cmd :v "nvim-config" (dz-nix-gvim "neovim"))
   (Cmd :h "home-manager" (dz-nix-gvim "home-manager"))
   (Cmd :s:minus "__.lua" (dz-nix-gvim "__")))
