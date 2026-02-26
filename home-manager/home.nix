@@ -43,7 +43,7 @@ let
     pkgs.ubuntu-classic
   ];
   zkmPkg = (
-    config.lib.nixGL.wrap inputs.zkm.packages.${pkgs.hostPlatform.system}.zkm
+    config.lib.nixGL.wrap inputs.zkm.packages.${system}.zkm
   );
   mkZkm = n: f: zn.writeBashScriptBin' n [zkmPkg f] ''
     ${zkmPkg}/bin/zkm ${f}
@@ -112,8 +112,8 @@ in {
     unzip
     vlc
     watchexec
-    (config.lib.nixGL.wrap inputs.zkg.packages.${pkgs.hostPlatform.system}.zkg)
-    (config.lib.nixGL.wrap inputs.ztr.packages.${pkgs.hostPlatform.system}.ztr)
+    (config.lib.nixGL.wrap inputs.zkg.packages.${system}.zkg)
+    (config.lib.nixGL.wrap inputs.ztr.packages.${system}.ztr)
     zkmPkg
     (mkZkm "home.zkm" (get-zkm-path "home"))
     # luajit
