@@ -28,7 +28,7 @@
     let
       utils = (import ./utils) inputs;
       inputs-utils = inputs // { utils = utils; };
-      __ = (import ./__.lua) inputs-utils;
+      __ = (import ./__) inputs-utils;
       inputs-utils-__ = inputs-utils // { __ = __; };
       neovim = (import ./neovim) inputs-utils-__;
       inputs-utils-neovim =inputs-utils // { neovim = neovim; };

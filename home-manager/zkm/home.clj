@@ -18,7 +18,7 @@
        (into [])))
 
 (defn nvim-proj-cmd [proj-dir]
-  (str "bash -c \"cd " proj-dir " && nix develop .#__.lua --command gvim\""))
+  (str "bash -c \"cd " proj-dir " && nix develop .#__ --command gvim\""))
 
 (Title "dz system")
 (Cmd :w "open web browser [firefox]" "firefox")
