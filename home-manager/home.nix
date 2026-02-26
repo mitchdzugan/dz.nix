@@ -228,6 +228,7 @@ in {
       WantedBy = [];
     };
     Service = {
+      KillMode = "process";
       ExecStart = "${zn.writeBashScriptBin' "sxhkd.launch" [pkgs.sxhkd] ''
         export PATH=${pkgs.sxhkd}/bin:$PATH
         sxhkd
