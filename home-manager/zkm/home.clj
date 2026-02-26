@@ -21,8 +21,8 @@
   (let [[cmd proj-dir attr] args]
     (str "bash -c \"cd "
              proj-dir
-             " && nix develop"
-             (if attr (str " .#" attr) "")
+             " && nix develop path:$DZ_NIX_CHECKOUT_PATH"
+             (if attr (str "#" attr) "")
              " --command "
              cmd
              "\"")))

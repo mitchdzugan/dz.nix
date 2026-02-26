@@ -9,3 +9,6 @@ super + w
 
 super + space
   home.zkm
+
+super + control + Escape
+  pkill -USR1 -x sxhkd
