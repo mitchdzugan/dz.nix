@@ -33,6 +33,10 @@
       neovim = (import ./neovim) inputs-utils-__;
       inputs-utils-neovim =inputs-utils // { neovim = neovim; };
       home-manager = (import ./home-manager) inputs-utils-neovim;
-    in home-manager
+    in home-manager // { __ = __; utils = utils;  } // (
+      inputs.flake-utils.lib.eachDefaultSystem (system: {
+        devShells.default = __.mkDevShell inputs.nixpkgs.legacyPackages.${system};
+      })
+    )
   );
 }

@@ -243,8 +243,20 @@
           fi
         '';
         mkPkg = pkgs: mkRawPkg pkgs;
+        mkDevShell = pkgs: let
+          nativeBuildInputs = with pkgs; [];
+          buildInputs = with pkgs; [
+            (mkLuaPkg pkgs)
+            (mkFnlFmt (_lua pkgs))
+            fennel-ls
+            rlwrap
+          ] ++ (mkExtraBuildInputs pkgs);
+        in pkgs.mkShell {
+          inherit nativeBuildInputs buildInputs;
+          shellHook = mkShellHook pkgs;
+        };
         madeOutputs = {
-          inherit mkPkg mkShellHook mkBuildInputs;
+          inherit mkPkg mkShellHook mkBuildInputs mkDevShell;
         }; in madeOutputs // flake-utils.lib.eachDefaultSystem (
         system: let
           pkgs = nixpkgs.legacyPackages.${system};
