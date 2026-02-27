@@ -1,0 +1,10 @@
+# Nix
+result*
+
+# Misc
+.direnv
+
+spec/**/*.lua
+
+### TEMP COMMENT OUT ## /**/flsproject.fnl
+### TEMP COMMENT OUT ## /.vscode

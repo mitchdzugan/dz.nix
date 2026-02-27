@@ -8,7 +8,7 @@ super + w
   firefox
 
 super + space
-  home.zkm
+  fish -c home.zkm
 
 super + control + Escape
   pkill -USR1 -x sxhkd

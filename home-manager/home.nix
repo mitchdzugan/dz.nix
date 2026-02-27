@@ -48,12 +48,10 @@ let
   mkZkm = n: f: zn.writeBashScriptBin' n [zkmPkg f] ''
     ${zkmPkg}/bin/zkm ${f}
   '';
-  /*
   luajit = (pkgs.luajit.withPackages (luaPackages: with luaPackages; [
     busted
     fennel
   ]));
-  */
 in {
   imports = [
     plasma-manager.homeModules.plasma-manager
@@ -89,6 +87,7 @@ in {
     jekyll
     jq
     just
+    kurve
     libnotify
     lua-language-server
     lxqt.pavucontrol-qt
@@ -116,20 +115,19 @@ in {
     (config.lib.nixGL.wrap inputs.ztr.packages.${system}.ztr)
     zkmPkg
     (mkZkm "home.zkm" (get-zkm-path "home"))
-    # luajit
-    # (neovim.mkPkg pkgs)
+    luajit
     (config.lib.nixGL.wrap pkgs.kitty)
     (config.lib.nixGL.wrap pkgs.vesktop)
     (config.lib.nixGL.wrap pkgs.pear-desktop)
     (config.lib.nixGL.wrap pkgs.neovide)
-    # (utils.mkFnlFmt luajit)
+    (utils.mkFnlFmt luajit)
     (utils.mkNixWork pkgs)
     (zn.writeBashScriptBin "lvim" ''
       export DZ_NVIM_CONFIG_USE_LOCAL=no
       nvim "$@"
     '')
     (zn.writeBashScriptBin "gvim" ''
-      neovide "$@" & disown
+      nohup neovide "$@" >/dev/null 2>&1 &
     '')
     (zn.writeBashScriptBin "lgvim" ''
       export DZ_NVIM_CONFIG_USE_LOCAL=no
@@ -194,6 +192,10 @@ in {
   # gtk.iconTheme.name = "Dracula";
 
   xdg.configFile = {
+    "kitty/kitty.conf" = {
+      source = mkDomainSymlink "./kitty/kitty.conf";
+      recursive = true;
+    };
     "sxhkd" = {
       source = mkDomainSymlink "./sxhkd";
       recursive = true;
@@ -245,7 +247,7 @@ in {
   fonts.fontconfig.defaultFonts.serif = [ "Liberation Serif" ];
   fonts.fontconfig.defaultFonts.sansSerif = [ "Ubuntu" ];
   fonts.fontconfig.defaultFonts.monospace = [
-    # "RecMonoCasual Nerd Font Mono"
+    "RecMonoCasual Nerd Font Mono"
     # "Lilex Nerd Font Mono"
     ### "Hurmit Nerd Font Mono"
     # "FantasqueSansM Nerd Font Mono"
@@ -259,7 +261,7 @@ in {
     # "MonaspiceKr Nerd Font Mono"
     # "MonaspiceXe Nerd Font Mono"
     # "MonaspiceRn Nerd Font Mono"
-    "MonaspiceAr Nerd Font Mono"
+    # "MonaspiceAr Nerd Font Mono"
   ];
 
   programs.firefox = {
