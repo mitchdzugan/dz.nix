@@ -198,6 +198,10 @@ in {
   # gtk.iconTheme.name = "Dracula";
 
   xdg.configFile = {
+    "autostart/org.kde.sxhkd.start.desktop" = {
+      source = mkDomainSymlink "./autostart/org.kde.sxhkd.start.desktop";
+      recursive = true;
+    };
     "kitty/kitty.conf" = {
       source = mkDomainSymlink "./kitty/kitty.conf";
       recursive = true;

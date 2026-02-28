@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=sxhkd launch
+Exec=systemctl --user start sxhkd.service
+Icon=system-software-update
+Type=Application
+NoDisplay=true
+OnlyShowIn=KDE
