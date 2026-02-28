@@ -4,5 +4,5 @@ attrs: ({ mk-home-manager = ((import ./home.nix) attrs); } // (
         pkgs = attrs.nixpkgs.legacyPackages.${system};
         zn = attrs.zn-nix.mk-zn system;
       in {
-        packages.default = pkgs.callPackage ./home-manager/dz-hm/default.nix;
+        packages.default = pkgs.callPackage ./dz-hm/default.nix {};
       })))
