@@ -148,9 +148,6 @@ in {
     (zn.writeBashScriptBin "rofi-dmenu" ''
       rofi -matching fuzzy -sorting-method fzf -sort -dmenu "$@"
     '')
-    (zn.writeBashScriptBin "dz-hm" ''
-      nix run "path:$DZ_NIX_CHECKOUT_PATH" -- "$@"
-    '')
     (zn.writeBashScriptBin "ssh-adhdz" ''
       gcloud compute ssh \
         --zone "us-central1-c" \
