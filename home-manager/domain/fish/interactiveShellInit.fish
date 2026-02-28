@@ -170,11 +170,7 @@ function _zssh_cmd
 end
 
 function _zssh_cmd_new
-  set local_brightness "$(dz-theme -:b)"
-  set local_vim "$(dz-theme -:v)"
-  set C_brightness "set -x DZ_SSH_BRIGHTNESS \"$local_brightness\""
-  set C_vim "set -x DZ_SSH_VIM \"$local_vim\""
-  ssh $argv -t "fish -C '$C_brightness' -C '$C_vim'"
+  ssh $argv -t "DZ_SSH_VIM='$(dz-theme -:v)' DZ_SSH_BRIGHTNESS='$(dz-theme -:b)' fish"
 end
 
 alias zssh="_zssh_cmd_new"
