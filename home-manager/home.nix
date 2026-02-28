@@ -206,6 +206,14 @@ in {
       source = mkDomainSymlink "./kitty/kitty.conf";
       recursive = true;
     };
+    "dz-theme/kitty" = {
+      source = mkDomainSymlink "./dz-theme/kitty";
+      recursive = true;
+    };
+    "dz-theme/themes.toml" = {
+      source = mkDomainSymlink "./dz-theme/themes.toml";
+      recursive = true;
+    };
     "sxhkd" = {
       source = mkDomainSymlink "./sxhkd";
       recursive = true;
