@@ -88,25 +88,27 @@ async function setThemeCmd() {
   await setTheme(best);
 }
 
-async function getActiveBrightness() {
+async function getIsDark() {
   const sshBrightness = process.env["DZ_SSH_BRIGHTNESS"];
-  return sshBrightness || (await exists(cfgPath("dark")));
+  return sshBrightness
+    ? sshBrightness === "dark"
+    : await exists(cfgPath("dark"));
 }
 
 async function getBrightnessCmd() {
-  console.log((await getActiveBrightness()) ? "dark" : "light");
+  console.log((await getIsDark()) ? "dark" : "light");
 }
 
 async function getVimCmd() {
   console.log(
     process.env["DZ_SSH_VIM"] ||
       (await slurp(cfgPath("vim"))) ||
-      ((await getActiveBrightness()) ? "monet" : "rose-pine-dawn"),
+      ((await getIsDark()) ? "monet" : "rose-pine-dawn"),
   );
 }
 
 async function toggleBrightnessCmd() {
-  const isDark = await getActiveBrightness();
+  const isDark = await getIsDark();
   opts.brightness = isDark ? "light" : "dark";
   await setThemeCmd();
 }
