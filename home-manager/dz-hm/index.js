@@ -153,8 +153,9 @@ async function initThisDotNix() {
 
 async function setHomeManagerFlakeDotNix() {
   const username = await execOut("whoami").then((s) => s.trim());
-  const hasLocal = await exists(dzNixPath("flake.nix"));
-  const dzNixUrl = hasLocal ? "path:./dz.nix" : "github:mitchdzugan/dz.nix";
+  // const hasLocal = await exists(dzNixPath("flake.nix"));
+  // const dzNixUrl = hasLocal ? "path:./dz.nix" : "github:mitchdzugan/dz.nix";
+  const dzNixUrl = "path:./dz.nix";
   const content = [
     "{",
     `  description = "Home Manager configuration";`,
@@ -176,10 +177,19 @@ async function setHomeManagerFlakeDotNix() {
   await spit(hmPath("flake.nix"), content);
 }
 
+async function cloneDzNix() {
+  await execWithInheritedIO(
+    "git",
+    ["clone", "--recurse-submodules", "https://github.com/mitchdzugan/dz.nix"],
+    { cwd: hmPath() },
+  );
+}
+
 async function switchCmd() {
   console.log("switching...");
   await installIfNeeded("home-manager", isHMInstalled, installHM);
   await installIfNeeded("this.nix", fnCond(hmPath("this.nix")), initThisDotNix);
+  await installIfNeeded("dz.nix", fnCond(dzNixPath("flake.nix")), cloneDzNix);
   await setHomeManagerFlakeDotNix();
   await execWithInheritedIO("home-manager", ["switch"]);
 }
