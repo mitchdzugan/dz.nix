@@ -13,6 +13,10 @@ let
   getEnvExtra = ({ env ? {}, ... }: env);
   envExtra = getEnvExtra this;
   system = pkgs.stdenv.hostPlatform.system;
+  unfreePkgs = (import nixpkgs {
+    inherit system;
+    config = { allowUnfree = true; };
+  });
   nurRepos = (import nixpkgs {
     inherit system;
     config = { allowUnfree = true; };
@@ -72,6 +76,7 @@ in {
     bundler
     cava
     direnv
+    unfreePkgs.dropbox
     emacs
     fastfetch
     fd
@@ -111,6 +116,7 @@ in {
     unzip
     vlc
     watchexec
+    (pkgs.callPackage ./dz-theme/default.nix {})
     (config.lib.nixGL.wrap inputs.zkg.packages.${system}.zkg)
     (config.lib.nixGL.wrap inputs.ztr.packages.${system}.ztr)
     zkmPkg

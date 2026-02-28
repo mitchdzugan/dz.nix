@@ -35,6 +35,7 @@
 (defn dz-nix-kitty [& args] (apply dz-nix-develop "kitty" args))
 
 (Title "dz system")
+(Cmd :c:grave "[light/dark] system theme toggle" "dz-theme --command toggle-brightness")
 (Cmd :w "open web browser [firefox]" "firefox")
 (Cmd :return "open terminal" "kitty")
 (Cmd :m "play melee (default iso)" (melee))

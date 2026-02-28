@@ -8,7 +8,10 @@ import { execa } from "execa";
 import * as toml from "smol-toml";
 import nopt from "nopt";
 
-const knownOpts = { brightness: ["dark", "light", null] };
+const knownOpts = {
+  brightness: ["dark", "light", null],
+  command: ["set-theme", "get-brightness", "toggle-brightness", null],
+};
 const shortHands = {
   light: ["--brightness", "light"],
   l: ["--brightness", "light"],
@@ -21,6 +24,12 @@ const paths = envPaths("dz-theme", { suffix: "" });
 
 const cfgPath = (...args) => path.join(paths.config, ...args);
 const xdgPath = (...args) => cfgPath("..", ...args);
+
+const exists = (p) =>
+  fs
+    .access(p, fs.constants.F_OK)
+    .then(() => true)
+    .catch(() => false);
 
 const rm = (p) =>
   fs
@@ -51,7 +60,7 @@ function getPreference(theme) {
   return theme.preference || 0;
 }
 
-async function main() {
+async function setThemeCmd() {
   const { theme } = toml.parse(await slurp(cfgPath("themes.toml")));
   const viable = Object.values(theme).filter(
     (t) =>
@@ -67,6 +76,30 @@ async function main() {
     }
   }
   await setTheme(best);
+}
+
+async function getBrightnessCmd() {
+  const isDark = await exists(cfgPath("dark"));
+  console.log(isDark ? "dark" : "light");
+}
+
+async function toggleBrightnessCmd() {
+  const isDark = await exists(cfgPath("dark"));
+  opts.brightness = isDark ? "light" : "dark";
+  await setThemeCmd();
+}
+
+async function main() {
+  const command = opts.command || "set-theme";
+  if (command === "set-theme") {
+    await setThemeCmd();
+  } else if (command === "get-brightness") {
+    await getBrightnessCmd();
+  } else if (command === "toggle-brightness") {
+    await toggleBrightnessCmd();
+  } else {
+    throw `unknown command ${command}`;
+  }
 }
 
 main()

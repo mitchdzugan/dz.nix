@@ -12,3 +12,6 @@ super + space
 
 super + control + Escape
   pkill -USR1 -x sxhkd
+
+super + control + grave
+  dz-theme --command toggle-brightness
