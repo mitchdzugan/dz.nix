@@ -10,13 +10,23 @@ import nopt from "nopt";
 
 const knownOpts = {
   brightness: ["dark", "light", null],
-  command: ["set-theme", "get-brightness", "toggle-brightness", null],
+  command: [
+    "set-theme",
+    "get-brightness",
+    "toggle-brightness",
+    "get-vim",
+    null,
+  ],
 };
 const shortHands = {
   light: ["--brightness", "light"],
   l: ["--brightness", "light"],
   dark: ["--brightness", "dark"],
   d: ["--brightness", "dark"],
+  ":brightness": ["--command", "get-brightness"],
+  ":b": ["--command", "get-brightness"],
+  ":vim": ["--command", "get-vim"],
+  ":v": ["--command", "get-vim"],
 };
 const opts = nopt(knownOpts, shortHands, process.argv, 2);
 
@@ -83,6 +93,14 @@ async function getBrightnessCmd() {
   console.log(isDark ? "dark" : "light");
 }
 
+async function getVimCmd() {
+  const configured = await slurp(cfgPath("vim"));
+  const vim =
+    configured ||
+    ((await exists(cfgPath("dark"))) ? "monet" : "rose-pine-dawn");
+  console.log(vim);
+}
+
 async function toggleBrightnessCmd() {
   const isDark = await exists(cfgPath("dark"));
   opts.brightness = isDark ? "light" : "dark";
@@ -93,6 +111,8 @@ async function main() {
   const command = opts.command || "set-theme";
   if (command === "set-theme") {
     await setThemeCmd();
+  } else if (command === "get-vim") {
+    await getVimCmd();
   } else if (command === "get-brightness") {
     await getBrightnessCmd();
   } else if (command === "toggle-brightness") {

@@ -169,7 +169,14 @@ function _zssh_cmd
   $cmd $final
 end
 
-alias zssh="_zssh_cmd ssh"
+function _zssh_cmd_new
+  ssh $argv -t \
+    fish \
+    -C 'set -X DZ_SSH_BRIGHTNESS $(dz-theme -:b)'
+    -C 'set -X DZ_SSH_VIM $(dz-theme -:v)'
+end
+
+alias zssh="_zssh_cmd_new"
 alias zscp="_zssh_cmd scp"
 
 function mk_vi_mode_icon
@@ -188,7 +195,7 @@ function configure_my_tide
   set -gx __color_fg_hlight yellow
   set -gx __color_fg_fail red
   set -gx __color_fg_succ green
-  if test -f "$HOME/.config/dz-theme/dark"
+  if test "$(dz-theme -:b)" = "dark"
     set -gx __color_fg_light black
     set -gx __color_fg_white brwhite
     set -gx __color_bg_dark 000000
