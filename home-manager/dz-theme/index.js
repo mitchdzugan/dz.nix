@@ -55,7 +55,7 @@ const spit = (p, s) =>
 const slurp = (p) => fs.readFile(p, "utf-8").catch(() => "");
 
 async function setTheme(theme) {
-  await (theme.isDark ? spit : rm)(cfgPath("dark"));
+  await (theme.isDark ? spit(cfgPath("dark"), "") : rm(cfgPath("dark")));
   await spit(cfgPath("vim"), theme.vim);
   await spit(
     xdgPath("kitty", "current-theme.conf"),
@@ -88,14 +88,13 @@ async function setThemeCmd() {
   await setTheme(best);
 }
 
-function getActiveBrightness() {
+async function getActiveBrightness() {
   const sshBrightness = process.env["DZ_SSH_BRIGHTNESS"];
-  return Promise.resolve(sshBrightness) || exists(cfgPath("dark"));
+  return sshBrightness || (await exists(cfgPath("dark")));
 }
 
 async function getBrightnessCmd() {
-  const isDark = await getActiveBrightness();
-  console.log(isDark ? "dark" : "light");
+  console.log((await getActiveBrightness()) ? "dark" : "light");
 }
 
 async function getVimCmd() {
