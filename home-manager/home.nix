@@ -116,6 +116,9 @@ in {
     unzip
     vlc
     watchexec
+    yarn
+    yarn2nix
+    (pkgs.callPackage ./dz-hm/default.nix {})
     (pkgs.callPackage ./dz-theme/default.nix {})
     (config.lib.nixGL.wrap inputs.zkg.packages.${system}.zkg)
     (config.lib.nixGL.wrap inputs.ztr.packages.${system}.ztr)
