@@ -35,6 +35,7 @@ const opts = nopt(knownOpts, shortHands, process.argv, 2);
 const paths = envPaths("dz-theme", { suffix: "" });
 
 const cfgPath = (...args) => path.join(paths.config, ...args);
+const dataPath = (...args) => path.join(paths.data, ...args);
 const xdgPath = (...args) => cfgPath("..", ...args);
 
 const exists = (p) =>
@@ -57,8 +58,7 @@ const spit = (p, s) =>
 const slurp = (p) => fs.readFile(p, "utf-8").catch(() => "");
 
 async function setTheme(theme) {
-  await (theme.isDark ? spit(cfgPath("dark"), "") : rm(cfgPath("dark")));
-  await spit(cfgPath("vim"), theme.vim);
+  await spit(dataPath("theme"), theme.id);
   await spit(
     xdgPath("kitty", "current-theme.conf"),
     await slurp(cfgPath("kitty", `${theme.kitty}.conf`)),
@@ -72,12 +72,25 @@ function getPreference(theme) {
   return theme.preference || 0;
 }
 
-async function setThemeCmd() {
-  const { theme } = toml.parse(await slurp(cfgPath("themes.toml")));
-  const viable = Object.values(theme).filter(
-    (t) =>
-      !opts.brightness || opts.brightness === (t.isDark ? "dark" : "light"),
-  );
+const DEFAULT_THEME = {
+  name: "clay dark",
+  isDark: true,
+  vim: "monet",
+  kitty: "selenized-black",
+  plasma: "ClayDark",
+  accent: "#A85CB8",
+  id: "clay-dark",
+};
+
+async function getCfg() {
+  try {
+    return toml.parse(await slurp(cfgPath("themes.toml")));
+  } catch (_e) {
+    return { theme: { DEFAULT_THEME } };
+  }
+}
+
+function getPreferredTheme(viable) {
   let best = viable[0];
   if (!best) {
     return;
@@ -87,14 +100,32 @@ async function setThemeCmd() {
       best = theme;
     }
   }
-  await setTheme(best);
+  return best;
+}
+
+async function setThemeCmd() {
+  const cfg = await getCfg();
+  for (const themeId in cfg.theme) {
+    cfg.theme[themeId].id = themeId;
+  }
+  const viable = Object.values(cfg.theme).filter(
+    (t) =>
+      !opts.brightness || opts.brightness === (t.isDark ? "dark" : "light"),
+  );
+  await setTheme(getPreferredTheme(viable));
+}
+
+async function getActiveTheme() {
+  const cfg = await getCfg();
+  const dataTheme = await slurp(dataPath("theme")).then((s) => s.trim());
+  return cfg.theme[dataTheme] || getPreferredTheme(object.values(cfg.theme));
 }
 
 async function getIsDark() {
   const sshBrightness = process.env["DZ_SSH_BRIGHTNESS"];
   return sshBrightness
     ? sshBrightness === "dark"
-    : await exists(cfgPath("dark"));
+    : await getActiveTheme().then((theme) => theme.isDark);
 }
 
 async function getBrightnessCmd() {
@@ -104,8 +135,7 @@ async function getBrightnessCmd() {
 async function getVimCmd() {
   console.log(
     process.env["DZ_SSH_VIM"] ||
-      (await slurp(cfgPath("vim"))) ||
-      ((await getIsDark()) ? "monet" : "rose-pine-dawn"),
+      (await getActiveTheme().then((theme) => theme.vim)),
   );
 }
 
