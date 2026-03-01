@@ -23,6 +23,8 @@ const shortHands = {
   l: ["--brightness", "light"],
   dark: ["--brightness", "dark"],
   d: ["--brightness", "dark"],
+  toggle: ["--command", "toggle-brightness"],
+  t: ["--command", "toggle-brightness"],
   ":brightness": ["--command", "get-brightness"],
   ":b": ["--command", "get-brightness"],
   ":vim": ["--command", "get-vim"],

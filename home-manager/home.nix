@@ -2,11 +2,17 @@ inputs@{ nixpkgs, plasma-manager, nixgl, nur, utils, neovim, ... }:
 this:
 { config, lib, pkgs, ... }:
 let
-  dz-nix-path = this.homeDirectory + "/.config/home-manager/dz.nix";
+  hm-path = this.homeDirectory + "/.config/home-manager";
+  ow-path = hm-path + "/overwriteables";
+  get-ow-path = rest: ow-path + "/" + rest;
+  dz-nix-path = hm-path + "/dz.nix";
   dz-neovim-path = dz-nix-path + "/neovim";
   dz-hm-path = dz-nix-path + "/home-manager";
   get-zkm-path = rest: dz-hm-path + "/zkm/" + rest + ".clj";
   get-domain-path = rest: dz-hm-path + "/domain/" + rest;
+  mkOverwriteableSymlink = rel: (
+    config.lib.file.mkOutOfStoreSymlink (get-ow-path rel)
+  );
   mkDomainSymlink = rel: (
     config.lib.file.mkOutOfStoreSymlink (get-domain-path rel)
   );
@@ -198,6 +204,10 @@ in {
   # gtk.iconTheme.name = "Dracula";
 
   xdg.configFile = {
+    "kglobalshortcutsrc" = {
+      source = mkOverwriteableSymlink "kglobalshortcutsrc";
+      recursive = true;
+    };
     "autostart/org.kde.sxhkd.start.desktop" = {
       source = mkDomainSymlink "./autostart/org.kde.sxhkd.start.desktop";
       recursive = true;

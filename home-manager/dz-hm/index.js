@@ -2,10 +2,14 @@
 
 import * as fs from "node:fs/promises";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { mkdirp } from "mkdirp";
 import { execa } from "execa";
 import nopt from "nopt";
 import chalk from "chalk";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 function $(...rawTopArgs) {
   rawTopArgs.reverse();
@@ -21,10 +25,11 @@ function $(...rawTopArgs) {
 const { cyan, magenta, bold, gray, green, red } = chalk;
 
 const knownOpts = {
-  command: ["switch", null],
+  command: ["switch", "pre-switch", null],
 };
 const shortHands = {
   switch: ["--command", "switch"],
+  pre: ["--command", "pre-switch"],
 };
 const opts = nopt(knownOpts, shortHands, process.argv, 2);
 
@@ -32,6 +37,9 @@ const homePath = (...args) => path.join(process.env.HOME, ...args);
 const configPath = (...args) => homePath(".config", ...args);
 const hmPath = (...args) => configPath("home-manager", ...args);
 const dzNixPath = (...args) => hmPath("dz.nix", ...args);
+const __Path = (...args) => path.join(__dirname, ...args);
+const owSrcPath = (...args) => __Path("overwriteables", ...args);
+const owDstPath = (...args) => hmPath("overwriteables", ...args);
 
 const exists = (p) =>
   fs
@@ -44,6 +52,7 @@ const rm = (p) =>
     .rm(p)
     .then(() => true)
     .catch(() => false);
+
 const spit = (p, s) =>
   mkdirp(path.dirname(p))
     .then(() => fs.writeFile(p, s || ""))
@@ -124,6 +133,10 @@ const fnCond =
   (...args) =>
   () =>
     exists(...args);
+const cp_ =
+  (...args) =>
+  () =>
+    fs.cp(...args);
 
 async function initThisDotNix() {
   const username = await execOut("whoami").then((s) => s.trim());
@@ -185,17 +198,29 @@ async function cloneDzNix() {
   );
 }
 
-async function switchCmd() {
-  console.log("switching...");
+async function preSwitchCmd(isSwitch = false) {
+  console.log((isSwitch ? "" : "pre") + "switching...");
   await installIfNeeded("home-manager", isHMInstalled, installHM);
   await installIfNeeded("this.nix", fnCond(hmPath("this.nix")), initThisDotNix);
   await installIfNeeded("dz.nix", fnCond(dzNixPath("flake.nix")), cloneDzNix);
   await setHomeManagerFlakeDotNix();
+  await mkdirp(owDstPath());
+  const ows = await fs.readdir(owSrcPath());
+  for (const ow of ows) {
+    const src = owSrcPath(ow);
+    const dst = owDstPath(ow);
+    await installIfNeeded(`overwriteables:${ow}`, fnCond(dst), cp_(src, dst));
+  }
+}
+async function switchCmd() {
+  await preSwitchCmd(true);
   await execWithInheritedIO("home-manager", ["switch"]);
 }
 
 async function main() {
-  if (opts.command === "switch") {
+  if (opts.command === "pre-switch") {
+    await preSwitchCmd();
+  } else if (opts.command === "switch") {
     await switchCmd();
   } else {
     throw `unknown cmd:  [ ${opts.command || "NO COMMAND GIVEN"} ]`;

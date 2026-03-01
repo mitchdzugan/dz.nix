@@ -8,7 +8,7 @@ accent = "#A85CB8"
 
 [theme.clay-light]
 name = "clay light"
-vim = "rose-pine-dawn"
+vim = "catppuccin-latte"
 kitty = "flexoki-light"
 plasma = "ClayLight"
 accent = "#A85CB8"

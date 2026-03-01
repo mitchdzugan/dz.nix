@@ -34,7 +34,7 @@ function fish_greeting
     kitten icat \
       --align=left \
       --use-window-size $tw,$th,$w,$h \
-      ~/.config/fastfetch/logo.nix.3.png
+      ~/.config/fastfetch/logo.nix.$(dz-theme -:b).png
     end | fastfetch \
       --raw - \
       --logo-width $lw \
