@@ -275,7 +275,7 @@ in {
   fonts.fontconfig.defaultFonts.serif = [ "Liberation Serif" ];
   fonts.fontconfig.defaultFonts.sansSerif = [ "Ubuntu" ];
   fonts.fontconfig.defaultFonts.monospace = [
-    "RecMonoCasual Nerd Font Mono"
+    # "RecMonoCasual Nerd Font Mono"
     # "Lilex Nerd Font Mono"
     ### "Hurmit Nerd Font Mono"
     # "FantasqueSansM Nerd Font Mono"
@@ -286,7 +286,7 @@ in {
     # "Monaspace Krypton Frozen ExtraBold"
     # "Monaspace Xenon Frozen ExtraBold"
     # "Monaspace Radon Frozen ExtraBold"
-    # "MonaspiceKr Nerd Font Mono"
+    "MonaspiceKr Nerd Font Mono"
     # "MonaspiceXe Nerd Font Mono"
     # "MonaspiceRn Nerd Font Mono"
     # "MonaspiceAr Nerd Font Mono"
