@@ -287,9 +287,10 @@ in {
     # "Monaspace Xenon Frozen ExtraBold"
     # "Monaspace Radon Frozen ExtraBold"
     # "MonaspiceKr Nerd Font Mono"
-    "MonaspiceXe Nerd Font Mono"
+    # "MonaspiceXe Nerd Font Mono"
+    # "MonaspiceNe Nerd Font Mono"
     # "MonaspiceRn Nerd Font Mono"
-    # "MonaspiceAr Nerd Font Mono"
+    "MonaspiceAr Nerd Font Mono"
   ];
 
   programs.firefox = {
@@ -378,6 +379,10 @@ in {
   programs.rofi = {
     enable = true;
     theme = ./domain/rofi/theme.rasi;
+  };
+  programs.zoxide = {
+    enable = true;
+    enableFishIntegration = true;
   };
   programs.home-manager.enable = true;
 }

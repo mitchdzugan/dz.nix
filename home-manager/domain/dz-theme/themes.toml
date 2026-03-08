@@ -1,8 +1,8 @@
 [theme.clay-dark]
 name = "clay dark"
 isDark = true
-vim = "monet"
-kitty = "selenized-black"
+vim = "rose-pine-moon"
+kitty = "kaolin-galaxy"
 plasma = "ClayDark"
 accent = "#A85CB8"
 

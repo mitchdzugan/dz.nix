@@ -4,6 +4,11 @@
     # "alt-l".command = '' kitty @ send-text "$(fzf-z-l)" '';
   };
   functions = {
+    macro_zi = ''
+      commandline "zi"
+      commandline -f execute
+      fish_vi_key_bindings
+    '';
     pure_z-l = ''
       for v in $(z -l);
         set -l words (string trim (string split -m1 " " "$v"));
@@ -109,7 +114,6 @@
     ./interactiveShellInit.fish
   );
   plugins = with pkgs.fishPlugins; [
-    { name = "z"; src = z.src; }
     { name = "grc"; src = grc.src; }
     { name = "fzf"; src = fzf.src; }
     { name = "tide"; src = tide.src; }

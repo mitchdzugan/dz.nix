@@ -425,6 +425,7 @@ if [ $TERM = "xterm-kitty" ]
   set -gx COLORTERM truecolor
 end
 fish_vi_key_bindings
+bind -M insert -m default \e/ macro_zi
 set -x fish_pid_interactive $fish_pid
 # alias cat 'bat --style header,snip,changes'
 if not test -x /usr/bin/yay; and test -x /usr/bin/paru
