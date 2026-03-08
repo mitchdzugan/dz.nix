@@ -118,7 +118,7 @@ async function setThemeCmd() {
 async function getActiveTheme() {
   const cfg = await getCfg();
   const dataTheme = await slurp(dataPath("theme")).then((s) => s.trim());
-  return cfg.theme[dataTheme] || getPreferredTheme(object.values(cfg.theme));
+  return cfg.theme[dataTheme] || getPreferredTheme(Object.values(cfg.theme));
 }
 
 async function getIsDark() {
