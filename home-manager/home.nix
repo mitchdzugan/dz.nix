@@ -81,9 +81,11 @@ in {
     brightnessctl
     bundler
     cava
+    dbeaver-bin
     direnv
     unfreePkgs.dropbox
     emacs
+    eslint
     fastfetch
     fd
     fennel-ls
@@ -98,6 +100,7 @@ in {
     jekyll
     jq
     just
+    kdePackages.qttools
     kurve
     libnotify
     lua-language-server
@@ -122,6 +125,7 @@ in {
     unzip
     vlc
     watchexec
+    # wrangler
     yarn
     yarn2nix
     (pkgs.callPackage ./dz-hm/default.nix {})
@@ -147,6 +151,12 @@ in {
     (zn.writeBashScriptBin "lgvim" ''
       export DZ_NVIM_CONFIG_USE_LOCAL=no
       gvim "$@"
+    '')
+    (zn.writeBashScriptBin "kwinSh" ''
+      qdbus org.kde.kglobalaccel \
+        /component/kwin \
+        org.kde.kglobalaccel.Component.invokeShortcut \
+        "$@"
     '')
     (zn.writeBashScriptBin "jj" ''
       just "$@"
@@ -187,6 +197,7 @@ in {
     DZ_NIX_CHECKOUT_PATH = dz-nix-path;
     DZ_NVIM_CONFIG_CHECKOUT_PATH = dz-neovim-path;
     DZ_HOME_MANAGER_CHECKOUT_PATH = dz-hm-path;
+    WINIT_X11_SCALE_FACTOR = "1";
   };
   home.pointerCursor = {
     # gtk.enable = true;

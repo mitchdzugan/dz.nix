@@ -1,8 +1,8 @@
 super + Return
   kitty
 
-super + slash
-  rofi -show drun
+# super + slash
+#   rofi -show drun
 
 super + w
   firefox
@@ -15,3 +15,30 @@ super + control + Escape
 
 super + control + grave
   dz-theme --command toggle-brightness
+
+# super + Up
+#   kwinSh "Window Maximize"
+
+# super + Left
+#   kwinSh "Window Quick Tile Bottom Left"; kwinSh "Window Quick Tile Top Left"; kwinSh "Window Maximize Vertical"
+
+# super + Right
+#   kwinSh "Window Quick Tile Top Right"; kwinSh "Window Quick Tile Top Right"; kwinSh "Window Maximize Vertical"
+
+# super + shift + Left
+#   kwinSh "Window Quick Tile Top Left"
+
+# super + shift + Right
+#   kwinSh "Window Quick Tile Top Right"
+
+# super + control + Left
+#   kwinSh "Window Quick Tile Bottom Left"
+
+# super + control + Right
+#   kwinSh "Window Quick Tile Bottom Right"
+
+# super + shift + Up
+#   kwinSh "Window Quick Tile Top Right"; kwinSh "Window Quick Tile Top Left"; kwinSh "Window Maximize Horizontal"
+
+# super + shift + Down
+#   kwinSh "Window Quick Tile Bottom Right"; kwinSh "Window Quick Tile Bottom Left"; kwinSh "Window Maximize Horizontal"

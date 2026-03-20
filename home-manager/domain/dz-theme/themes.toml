@@ -1,7 +1,7 @@
 [theme.clay-dark]
 name = "clay dark"
 isDark = true
-vim = "rose-pine-moon"
+vim = "fluoromachine"
 kitty = "kaolin-galaxy"
 plasma = "ClayDark"
 accent = "#A85CB8"
