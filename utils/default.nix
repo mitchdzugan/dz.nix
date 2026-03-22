@@ -35,6 +35,17 @@
         sha256 = "sha256-YBtkCLHI1GH1BzjM7zTppyzJd/w6nuJGnehJyupHhSY=";
       };
     };
+    mkLuaWebview = lua: lua.pkgs.buildLuarocksPackage {
+      pname = "lua-webview";
+      version = "1.4-3";
+      knownRockspec = ./lua-webview-1.4-3.rockspec;
+      src = fetchFromGitHub {
+        owner = "javalikescript";
+        repo = "lua-webview";
+        rev = "1.4.3";
+        sha256 = "sha256-D+US2dfYk/WqRmNMnweoCyUqI9Vm0/NbcscpJjAn/o0=";
+      };
+    };
     /*
     mkNeorg = env: env.luaPackages.buildLuarocksPackage {
       pname = "neorg";
@@ -103,6 +114,7 @@
           luaPackages = (_lua pkgs).pkgs // {
             lua-colors = mkLuaColors (_lua pkgs);
             pegasus = mkPegasus (_lua pkgs);
+            lua-webview = mkLuaWebview (_lua pkgs);
           };
         };
         _lp = pkgs: (_lua pkgs).pkgs;
@@ -281,6 +293,7 @@
       ${pkgs.bash}/bin/bash ${./nix-work.bash}
     '';
     mkPegasus = mkPegasus;
+    mkLuaWebview = mkLuaWebview;
     mkLuaColors = mkLuaColors;
     # mkNeorg = mkNeorg;
     mkFnlFmt = mkFnlFmt;
