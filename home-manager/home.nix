@@ -89,7 +89,6 @@ in {
     fastfetch
     fd
     fennel-ls
-    fzf
     gh
     github-desktop
     git
@@ -198,6 +197,7 @@ in {
     DZ_NVIM_CONFIG_CHECKOUT_PATH = dz-neovim-path;
     DZ_HOME_MANAGER_CHECKOUT_PATH = dz-hm-path;
     WINIT_X11_SCALE_FACTOR = "1";
+    BROWSER = "firefox";
   };
   home.pointerCursor = {
     # gtk.enable = true;
@@ -340,12 +340,27 @@ in {
     clock24 = true;
     mouse = true;
     escapeTime = 0;
+    terminal = "tmux-256color";
     keyMode = "vi";
     plugins = with pkgs.tmuxPlugins; [
-      {
+      /*{
         plugin = rose-pine;
+        extraConfig = "set -g @rose_pine_variant 'main'";
+      }
+      {
+        plugin = tmux-colors-solarized;
+        extraConfig = "set -g @colors-solarized 'light'";
+      }*/
+      {
+        plugin = ukiyo;
         extraConfig = ''
-          set -g @rose_pine_variant 'main'
+          set -g @ukiyo-theme "catppuccin/latte"
+          set -g @ukiyo-show-battery "false"
+          set -g @ukiyo-show-powerline true
+          set -g @ukiyo-network-bandwidth-show-interface "false"
+          set -g @ukiyo-show-location "false"
+          set -g @ukiyo-show-fahrenheit true
+          set -g @ukiyo-ignore-window-colors true
         '';
       }
     ];
@@ -353,6 +368,7 @@ in {
     extraConfig = ''
       set -g allow-passthrough on
       set -g default-shell ${pkgs.fish}/bin/fish
+      setenv -g DZ_FISH_SKIP_FASTFETCH "yes"
     '';
   };
   programs.fish = import ./domain/fish/hm.nix { lib = lib; pkgs = pkgs; };
@@ -394,6 +410,11 @@ in {
   programs.zoxide = {
     enable = true;
     enableFishIntegration = true;
+  };
+  programs.fzf = {
+    enable = true;
+    enableFishIntegration = true;
+    tmux.enableShellIntegration = true;
   };
   programs.home-manager.enable = true;
 }
