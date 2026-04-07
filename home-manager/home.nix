@@ -129,6 +129,7 @@ in {
     yarn2nix
     (pkgs.callPackage ./dz-hm/default.nix {})
     (pkgs.callPackage ./dz-theme/default.nix {})
+    (pkgs.callPackage ./dz-ytmdl/default.nix {})
     (config.lib.nixGL.wrap inputs.zkg.packages.${system}.zkg)
     (config.lib.nixGL.wrap inputs.ztr.packages.${system}.ztr)
     zkmPkg
@@ -136,7 +137,7 @@ in {
     luajit
     (config.lib.nixGL.wrap pkgs.kitty)
     (config.lib.nixGL.wrap pkgs.vesktop)
-    (config.lib.nixGL.wrap pkgs.pear-desktop)
+    # (config.lib.nixGL.wrap pkgs.pear-desktop)
     (config.lib.nixGL.wrap pkgs.neovide)
     (utils.mkFnlFmt luajit)
     (utils.mkNixWork pkgs)
@@ -354,7 +355,7 @@ in {
       {
         plugin = ukiyo;
         extraConfig = ''
-          set -g @ukiyo-theme "catppuccin/latte"
+          set -g @ukiyo-theme "catppuccin/mocha"
           set -g @ukiyo-show-battery "false"
           set -g @ukiyo-show-powerline true
           set -g @ukiyo-network-bandwidth-show-interface "false"

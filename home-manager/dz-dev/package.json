@@ -1,0 +1,17 @@
+{
+  "name": "dz-dev",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "bin": "./index.js",
+  "dependencies": {
+    "env-paths": "^4.0.0",
+    "execa": "^9.6.1",
+    "express": "^5.2.1",
+    "mkdirp": "^3.0.1",
+    "nopt": "^9.0.0",
+    "smol-toml": "^1.6.0"
+  }
+}
