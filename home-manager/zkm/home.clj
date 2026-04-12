@@ -8,6 +8,7 @@
                "--notifications"
                "--nightLight"
                "gamemoderun"
+               "obs-gamecapture"
                "/home/dz/.config/Slippi\\ Launcher/netplay/Slippi_Online-x86_64.AppImage"
                "-b"
                "-e"

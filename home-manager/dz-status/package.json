@@ -1,0 +1,13 @@
+{
+  "name": "dz-status",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "bin": "./index.js",
+  "dependencies": {
+    "env-paths": "^4.0.0",
+    "mkdirp": "^3.0.1"
+  }
+}
