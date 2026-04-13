@@ -289,6 +289,22 @@ in
       size = 11.0
     '';
   };
+  systemd.user.services.pusdb = {
+    Unit = {
+      Description = "pusdb backend";
+      WantedBy = [ ];
+    };
+    Service = {
+      ExecStart = "${
+        zn.writeBashScriptBin' "pusdb.launch" [ pkgs.fish ] ''
+          export PATH=${pkgs.fish}/bin:$PATH
+          cd /home/dz/Projects/pusdb
+          nix develop --command fish -c "just backend"
+        ''
+      }/bin/pusdb.launch";
+      Restart = "always";
+    };
+  };
   systemd.user.services.polybar = {
     Unit = {
       Description = "polybar runner";
