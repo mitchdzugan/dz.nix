@@ -170,7 +170,7 @@ function _zssh_cmd
 end
 
 function _zssh_cmd_new
-  ssh $argv -t "DZ_SSH_VIM='$(dz-theme -:v)' DZ_SSH_BRIGHTNESS='$(dz-theme -:b)' fish"
+  ssh $argv -t "DZ_SSH_VIM='$(dz-theme -:v)' DZ_SSH_TMUX='$(dz-theme -:t)' DZ_SSH_BRIGHTNESS='$(dz-theme -:b)' fish"
 end
 
 alias zssh="_zssh_cmd_new"

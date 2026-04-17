@@ -5,6 +5,7 @@ vim = "fluoromachine"
 kitty = "kaolin-galaxy"
 plasma = "ClayDark"
 accent = "#A85CB8"
+tmux = "catppuccin/mocha"
 
 [theme.clay-light]
 name = "clay light"
@@ -12,3 +13,4 @@ vim = "catppuccin-latte"
 kitty = "flexoki-light"
 plasma = "ClayLight"
 accent = "#A85CB8"
+tmux = "catppuccin/latte"

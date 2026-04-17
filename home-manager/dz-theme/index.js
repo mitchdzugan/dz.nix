@@ -15,6 +15,7 @@ const knownOpts = {
     "get-brightness",
     "toggle-brightness",
     "get-vim",
+    "get-tmux",
     null,
   ],
 };
@@ -29,6 +30,8 @@ const shortHands = {
   ":b": ["--command", "get-brightness"],
   ":vim": ["--command", "get-vim"],
   ":v": ["--command", "get-vim"],
+  ":tmux": ["--command", "get-tmux"],
+  ":t": ["--command", "get-tmux"],
 };
 const opts = nopt(knownOpts, shortHands, process.argv, 2);
 
@@ -139,6 +142,13 @@ async function getVimCmd() {
   );
 }
 
+async function getTmuxCmd() {
+  console.log(
+    process.env["DZ_SSH_TMUX"] ||
+      (await getActiveTheme().then((theme) => theme.tmux)),
+  );
+}
+
 async function toggleBrightnessCmd() {
   const isDark = await getIsDark();
   opts.brightness = isDark ? "light" : "dark";
@@ -149,6 +159,8 @@ async function main() {
   const command = opts.command || "set-theme";
   if (command === "set-theme") {
     await setThemeCmd();
+  } else if (command === "get-tmux") {
+    await getTmuxCmd();
   } else if (command === "get-vim") {
     await getVimCmd();
   } else if (command === "get-brightness") {

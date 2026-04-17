@@ -16,6 +16,9 @@ super + control + Escape
 super + control + grave
   dz-theme --command toggle-brightness
 
+super + shift + f
+  kwinSh "Window Fullscreen"
+
 # super + Up
 #   kwinSh "Window Maximize"
 

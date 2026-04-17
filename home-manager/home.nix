@@ -417,7 +417,7 @@ in
       {
         plugin = ukiyo;
         extraConfig = ''
-          set -g @ukiyo-theme "catppuccin/mocha"
+          run-shell 'tmux set -g @ukiyo-theme "$(echo dz-theme -:t | fish)"'
           set -g @ukiyo-show-battery "false"
           set -g @ukiyo-show-powerline true
           set -g @ukiyo-network-bandwidth-show-interface "false"
