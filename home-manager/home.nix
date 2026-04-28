@@ -362,6 +362,7 @@ in
 
   programs.firefox = {
     enable = true;
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
     package = config.lib.nixGL.wrap pkgs.firefox;
     policies = {
       Preferences = {
