@@ -1,7 +1,6 @@
-{ pkgs, ... }: pkgs.mkYarnPackage {
-  name = "dz-theme";
+{ pkgs, ... }: pkgs.buildNpmPackage {
+  pname = "dz-theme";
+  version = "1.0.0";
   src = ./.;
-  packageJSON = ./package.json;
-  yarnLock = ./yarn.lock;
-  yarnNix = ./yarn.nix;
+  npmDepsHash = "sha256-6TviJZOGGszDDJ8kE11UCZj43d6DwVIgeHS7vGW7LN8=";
 }

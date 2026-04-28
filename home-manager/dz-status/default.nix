@@ -1,7 +1,6 @@
-{ pkgs, ... }: pkgs.mkYarnPackage {
-  name = "dz-status";
+{ pkgs, ... }: pkgs.buildNpmPackage {
+  pname = "dz-status";
+  version = "1.0.0";
   src = ./.;
-  packageJSON = ./package.json;
-  yarnLock = ./yarn.lock;
-  yarnNix = ./yarn.nix;
+  npmDepsHash = "sha256-qM+G8ghqQ/szAfZXtsBuYmVgbX2dmZu2UHX8oGSACbQ=";
 }
