@@ -22,6 +22,9 @@
     zkg.inputs.nixpkgs.follows = "nixpkgs";
     zkm.url = "github:mitchdzugan/zkm";
     zkm.inputs.nixpkgs.follows = "nixpkgs";
+    slippi.url = "github:lytedev/slippi-nix";
+    slippi.inputs.nixpkgs.follows = "nixpkgs";
+
   };
 
   outputs = inputs: (

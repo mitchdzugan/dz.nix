@@ -5,6 +5,7 @@ inputs@{
   nur,
   utils,
   neovim,
+  slippi,
   ...
 }:
 this:
@@ -92,6 +93,8 @@ in
 {
   imports = [
     plasma-manager.homeModules.plasma-manager
+    slippi.homeManagerModules.default
+    { slippi-launcher.isoPath = "/home/dz/ssbm/iso/ssbm.1_02.iso"; }
   ];
   targets.genericLinux.nixGL = {
     packages = nixgl.packages;
@@ -165,6 +168,8 @@ in
       (pkgs.callPackage ./dz-status/default.nix { })
       (config.lib.nixGL.wrap inputs.zkg.packages.${system}.zkg)
       (config.lib.nixGL.wrap inputs.ztr.packages.${system}.ztr)
+      (config.lib.nixGL.wrap inputs.slippi.packages.${system}.slippi-netplay)
+      (config.lib.nixGL.wrap inputs.slippi.packages.${system}.slippi-playback)
       zkmPkg
       (mkZkm "home.zkm" (get-zkm-path "home"))
       luajit
@@ -282,6 +287,10 @@ in
     };
     "fastfetch" = {
       source = mkDomainSymlink "./fastfetch";
+      recursive = true;
+    };
+    "SlippiPlayback/GameSettings/GALE01.ini" = {
+      source = mkOverwriteableSymlink "SlippiPlaybackGecko.ini";
       recursive = true;
     };
     "neovide/config.toml".text = ''

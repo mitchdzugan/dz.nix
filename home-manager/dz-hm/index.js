@@ -214,6 +214,7 @@ async function preSwitchCmd(isSwitch = false) {
 }
 async function switchCmd() {
   await preSwitchCmd(true);
+  await execWithInheritedIO("nix", ["flake", "update"], { cwd: hmPath() });
   await execWithInheritedIO("home-manager", ["switch"]);
 }
 
