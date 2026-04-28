@@ -6,6 +6,10 @@
   "author": "",
   "type": "module",
   "bin": "./index.js",
+  "scripts": {
+    "build": "",
+    "run": "node ./index.js"
+  },
   "dependencies": {
     "chalk": "^5.6.2",
     "execa": "^9.6.1",

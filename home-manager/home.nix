@@ -157,11 +157,11 @@ in
       watchexec
       # wrangler
       yarn
-      yarn2nix
+      # yarn2nix
       (pkgs.callPackage ./dz-hm/default.nix { })
-      (pkgs.callPackage ./dz-theme/default.nix { })
+      # (pkgs.callPackage ./dz-theme/default.nix { })
       (pkgs.callPackage ./dz-ytmdl/default.nix { })
-      (pkgs.callPackage ./dz-status/default.nix { })
+      # (pkgs.callPackage ./dz-status/default.nix { })
       (config.lib.nixGL.wrap inputs.zkg.packages.${system}.zkg)
       (config.lib.nixGL.wrap inputs.ztr.packages.${system}.ztr)
       zkmPkg
