@@ -6,6 +6,7 @@
   "author": "",
   "type": "module",
   "bin": "./index.js",
+  "scripts": { "build": "" },
   "dependencies": {
     "env-paths": "^4.0.0",
     "mkdirp": "^3.0.1"
