@@ -170,6 +170,7 @@ in
       (config.lib.nixGL.wrap inputs.ztr.packages.${system}.ztr)
       (config.lib.nixGL.wrap inputs.slippi.packages.${system}.slippi-netplay)
       (config.lib.nixGL.wrap inputs.slippi.packages.${system}.slippi-playback)
+      inputs.slp-rec.packages.${system}.slp-rec
       zkmPkg
       (mkZkm "home.zkm" (get-zkm-path "home"))
       luajit

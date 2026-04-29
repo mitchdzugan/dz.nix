@@ -25,11 +25,12 @@ function $(...rawTopArgs) {
 const { cyan, magenta, bold, gray, green, red } = chalk;
 
 const knownOpts = {
-  command: ["switch", "pre-switch", null],
+  command: ["switch", "pre-switch", "update", null],
 };
 const shortHands = {
   switch: ["--command", "switch"],
   pre: ["--command", "pre-switch"],
+  update: ["--command", "update"],
 };
 const opts = nopt(knownOpts, shortHands, process.argv, 2);
 
@@ -218,9 +219,15 @@ async function switchCmd() {
   await execWithInheritedIO("home-manager", ["switch"]);
 }
 
+async function updateCmd() {
+  await execWithInheritedIO("nix", ["flake", "update"], { cwd: dzNixPath() });
+}
+
 async function main() {
   if (opts.command === "pre-switch") {
     await preSwitchCmd();
+  } else if (opts.command === "update") {
+    await updateCmd();
   } else if (opts.command === "switch") {
     await switchCmd();
   } else {
