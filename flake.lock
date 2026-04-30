@@ -876,11 +876,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777476904,
-        "narHash": "sha256-EeLoE8n4+QCbteyAsYXxhfr97RFfWL1ga0xwfL6lpKw=",
+        "lastModified": 1777518431,
+        "narHash": "sha256-SwgiG2T5pbyo33Vz7/vUCAhEMgwCK8Pa2nDSx5a6/WE=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "8c8e5389e75a36bee53920de8ee24f017b3ae03e",
+        "rev": "2e54a938cdd4c8e414b2518edc3d82308027c670",
         "type": "github"
       },
       "original": {
@@ -1493,11 +1493,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777482601,
-        "narHash": "sha256-gToR04nIZyBx0QZ92axg8bCXTHGNpnDZa9tBcQGvs4Y=",
+        "lastModified": 1777584986,
+        "narHash": "sha256-tbxdRckrHqWqCrvDWnwIgEli9QThCgcUTg0Z73lhwvo=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "34798653ee72d2e8e32cb3587d167fdb56ff0573",
+        "rev": "be30ee658f6ac64b7c97fdf10019e316c403c96d",
         "type": "github"
       },
       "original": {
@@ -1694,11 +1694,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1774370155,
-        "narHash": "sha256-emNcbleHPyUszpRFV5mHnU3q4E0aq7FNJxPtIAvsJqE=",
+        "lastModified": 1777492414,
+        "narHash": "sha256-1gmodLfwgw4UpOIYj9KBur57rD0O08Qd/r0miE58/Ww=",
         "owner": "lytedev",
         "repo": "slippi-nix",
-        "rev": "c1f16cb34f7e09e8a9c7fe49744305c2f65a5b5f",
+        "rev": "4e8d34e9f469f7ec5a66babf66eb897f9128ca18",
         "type": "github"
       },
       "original": {
@@ -1715,11 +1715,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777470617,
-        "narHash": "sha256-VY7yVLdii/NC4DZjKc3J3LfsIHvDU9SaDPSHJ4x9rzs=",
+        "lastModified": 1777585210,
+        "narHash": "sha256-v+RbOYI2n9XwzhWuYe2Jb8yE16EFh85UXnT3V4EAXnA=",
         "owner": "mitchdzugan",
         "repo": "slp-rec",
-        "rev": "4bd2ef261d6fbdd9281723532ffd9678cdcd9589",
+        "rev": "d9efb9ef19d0cb3146a8edb33ac9991c2c2bbf9f",
         "type": "github"
       },
       "original": {
@@ -1931,11 +1931,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777483557,
-        "narHash": "sha256-c+lotnYkV5an7L0pcUKrf7mXkN4km2aYfJPjE74UYbo=",
+        "lastModified": 1777584636,
+        "narHash": "sha256-NNdwXL28X7mi8Y67mPmtMaR1dteboMrsy+vfnkLPVz8=",
         "owner": "mitchdzugan",
         "repo": "yt_upload_playwright",
-        "rev": "bf23ad0bef4440910c82ba7f71d0a94cfa623b62",
+        "rev": "3e22c52fc2e20b96be4dd153adb18bb4fdf81163",
         "type": "github"
       },
       "original": {

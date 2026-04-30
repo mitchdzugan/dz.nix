@@ -25,12 +25,13 @@ function $(...rawTopArgs) {
 const { cyan, magenta, bold, gray, green, red } = chalk;
 
 const knownOpts = {
-  command: ["switch", "pre-switch", "update", null],
+  command: ["switch", "switch-up", "pre-switch", "update", null],
 };
 const shortHands = {
   switch: ["--command", "switch"],
   pre: ["--command", "pre-switch"],
   update: ["--command", "update"],
+  "switch-up": ["--command", "switch-up"],
 };
 const opts = nopt(knownOpts, shortHands, process.argv, 2);
 
@@ -229,6 +230,9 @@ async function main() {
   } else if (opts.command === "update") {
     await updateCmd();
   } else if (opts.command === "switch") {
+    await switchCmd();
+  } else if (opts.command === "switch-up") {
+    await updateCmd();
     await switchCmd();
   } else {
     throw `unknown cmd:  [ ${opts.command || "NO COMMAND GIVEN"} ]`;

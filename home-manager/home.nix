@@ -146,6 +146,7 @@ in
       nixfmt
       nodejs
       pandoc
+      pnpm
       prettier
       python3
       ripgrep
@@ -157,6 +158,7 @@ in
       ueberzugpp
       unzip
       vlc
+      vscodium
       watchexec
       # wrangler
       yarn
