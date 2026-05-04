@@ -876,11 +876,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777780644,
-        "narHash": "sha256-CYpc+mk28rmcQWGygeM8CA+Z8SZYy8BOyQtiW18spao=",
+        "lastModified": 1777913624,
+        "narHash": "sha256-4MwfrGuqjsnEORQbM3cmkmG/9cWhDV63dTDguDj4FXw=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "b9311028044a9e9b2cf27db15ef0a87d464e212d",
+        "rev": "a89686d115e970e200eb2caa7603f3673050e00c",
         "type": "github"
       },
       "original": {
@@ -1493,11 +1493,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777809425,
-        "narHash": "sha256-gpOUqJNA2ktvsKbFJgU+/L+aNDp0uGDhgS+0UCQ//NU=",
+        "lastModified": 1777930985,
+        "narHash": "sha256-cBbTsxIh2s/NDuNTFR9ly10QqQVr2HoM6uUqz9y7oG0=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "a18f7bab19bf30ef187e908639389464fb6d7744",
+        "rev": "7f17a4b762266f262ffd664d4eaba2f6c0e0e0e3",
         "type": "github"
       },
       "original": {
@@ -1678,7 +1678,7 @@
         "plasma-manager": "plasma-manager",
         "slippi": "slippi",
         "slp-rec": "slp-rec",
-        "yt-upload-pw": "yt-upload-pw",
+        "yt-upload-playwright": "yt-upload-playwright",
         "zkg": "zkg",
         "zkm": "zkm",
         "zn-nix": "zn-nix_5",
@@ -1923,7 +1923,7 @@
         "type": "github"
       }
     },
-    "yt-upload-pw": {
+    "yt-upload-playwright": {
       "inputs": {
         "flake-utils": "flake-utils_4",
         "nixpkgs": [

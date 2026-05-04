@@ -146,6 +146,7 @@ in
       nixfmt
       nodejs
       pandoc
+      pnpm
       prettier
       python3
       ripgrep
@@ -157,6 +158,7 @@ in
       ueberzugpp
       unzip
       vlc
+      vscodium
       watchexec
       # wrangler
       yarn
@@ -172,7 +174,7 @@ in
       (config.lib.nixGL.wrap inputs.slippi.packages.${system}.slippi-netplay)
       (config.lib.nixGL.wrap inputs.slippi.packages.${system}.slippi-playback)
       inputs.slp-rec.packages.${system}.slp-rec
-      inputs.yt-upload-pw.packages.${system}.yt-upload-playwright
+      inputs.yt-upload-playwright.packages.${system}.yt-upload-playwright
       zkmPkg
       (mkZkm "home.zkm" (get-zkm-path "home"))
       luajit
