@@ -161,6 +161,7 @@ in
       # wrangler
       yarn
       # yarn2nix
+      yj
       (pkgs.callPackage ./dz-hm/default.nix { })
       (pkgs.callPackage ./dz-dev/default.nix { })
       (pkgs.callPackage ./dz-theme/default.nix { })
@@ -171,6 +172,7 @@ in
       (config.lib.nixGL.wrap inputs.slippi.packages.${system}.slippi-netplay)
       (config.lib.nixGL.wrap inputs.slippi.packages.${system}.slippi-playback)
       inputs.slp-rec.packages.${system}.slp-rec
+      inputs.yt-upload-pw.packages.${system}.yt-upload-playwright
       zkmPkg
       (mkZkm "home.zkm" (get-zkm-path "home"))
       luajit
