@@ -282,6 +282,10 @@ in
       source = mkDomainSymlink "./dz-theme/themes.toml";
       recursive = true;
     };
+    "slp-rec" = {
+      source = mkDomainSymlink "./slp-rec";
+      recursive = true;
+    };
     "sxhkd" = {
       source = mkDomainSymlink "./sxhkd";
       recursive = true;
