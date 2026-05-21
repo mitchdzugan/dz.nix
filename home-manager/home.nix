@@ -517,6 +517,7 @@ in
             modus-themes-nvim
             onedarkpro-nvim
             oxocarbon-nvim
+            edge
             (fromGitHub "tiagovla/tokyodark.nvim" "HEAD" "14bc1b3e596878a10647af7c82de7736300f3322")
             (fromGitHub "bluz71/vim-moonfly-colors" "HEAD" "63f20d657c9fd46ecdd75bd45c321f74ef9b11fe")
             (fromGitHub "dgox16/oldworld.nvim" "HEAD" "1b8e1b2052b5591386187206a9afbe9e7fdbb35f")
