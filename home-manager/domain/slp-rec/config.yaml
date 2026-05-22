@@ -1,0 +1,13 @@
+ssbm-iso-path: /VOID/ssbm/iso/ssbm.1_02.iso
+slippi-playback-bin:
+  /home/dz/.config/Slippi Launcher/playback/Slippi_Playback-x86_64.AppImage
+gecko-codes:
+  - null
+  - gecko/preventCrowdChants.gecko
+  - gecko/preventCrowdNoises.gecko
+gecko-disables: [Show Player Names]
+gecko-enables:
+  - Game Music OFF
+  - Hide Waiting For Game
+  - Prevent Character Crowd Chants
+  - Prevent Crowd Noises

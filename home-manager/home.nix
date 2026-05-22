@@ -154,6 +154,7 @@ in
       rofi
       rust-analyzer
       sxhkd
+      tree
       typescript-language-server
       ueberzugpp
       unzip
@@ -444,6 +445,7 @@ in
           set -g @ukiyo-show-location "false"
           set -g @ukiyo-show-fahrenheit true
           set -g @ukiyo-ignore-window-colors true
+          set -g default-command "${pkgs.fish}/bin/fish -C 'source ./.session.fish &> /dev/null'"
         '';
       }
     ];
