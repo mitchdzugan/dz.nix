@@ -93,13 +93,18 @@ in
 {
   imports = [
     plasma-manager.homeModules.plasma-manager
-    slippi.homeManagerModules.default
-    { slippi-launcher.isoPath = "/home/dz/ssbm/iso/ssbm.1_02.iso"; }
+    # slippi.homeManagerModules.default
+    # { slippi-launcher.isoPath = "/home/dz/ssbm/iso/ssbm.1_02.iso"; }
   ];
-  targets.genericLinux.nixGL = {
-    packages = nixgl.packages;
-    defaultWrapper = this.defaultNixGLWrapper;
+  /*
+  targets.genericLinux.gpu.enable = true;
+  targets.genericLinux.gpu.nvidia = {
+    enable = true;
+    version = "595.71.05";
+    sha256 = "sha256-AAAAAAAAAAAAAAAAAAAa=";
   };
+  */
+  targets.genericLinux.nixGL = { packages = nixgl.packages; defaultWrapper = this.defaultNixGLWrapper; };
   home.username = this.username;
   home.homeDirectory = this.homeDirectory;
   home.stateVersion = this.stateVersion;
@@ -134,7 +139,7 @@ in
       jq
       just
       kdePackages.qttools
-      kurve
+      # kurve
       libnotify
       lua-language-server
       lxqt.pavucontrol-qt
@@ -230,8 +235,54 @@ in
         }
         doTheThing "$@" & disown
       '')
+      (let
+          polybar_cava = pkgs.writeShellApplication {
+            name = "polybar_cava";
+            runtimeInputs = [ pkgs.coreutils pkgs.cava pkgs.gnused ];
+            text = builtins.readFile ./domain/polybar/cava.sh;
+          };
+          extraPkgs = [
+            pkgs.coreutils
+            pkgs.systemd
+            pkgs.which
+            /* pkgs.bspwm */
+            pkgs.nodejs
+            /* pkgs.pamixer */
+            pkgs.pulseaudio
+            polybar_cava
+          (pkgs.polybar.override {
+            alsaSupport = true;
+            iwSupport = true;
+            githubSupport = true;
+            pulseSupport = true;
+            mpdSupport = true;
+          })
+          ];
+          extraBinPath = lib.makeBinPath extraPkgs;
+        in
+        zn.writeBashScriptBin' "_polybar-launch" extraPkgs ''
+          export PATH=${extraBinPath}:$PATH
+            for m in $(polybar --list-monitors | cut -d":" -f1); do
+              MONITOR=$m polybar -c ${./domain/polybar/config.ini} --reload example &
+            done
+        '')
+      (zn.writeBashScriptBin "polybar-launch" ''
+        nohup _polybar-launch "$@" >/dev/null 2>&1 &
+      '')
     ];
   home.file = {
+    ".local/share/color-schemes" = {
+      source = mkDomainSymlink "./plasma/color-schemes";
+      recursive = true;
+    };
+    ".local/share/plasma/desktoptheme" = {
+      source = mkDomainSymlink "./plasma/plasma-style";
+      recursive = true;
+    };
+    ".local/share/plasma/plasmoids" = {
+      source = mkDomainSymlink "./plasma/plasmoids";
+      recursive = true;
+    };
     ".face.icon" = {
       source = mkDomainSymlink "./static/face.icon";
       recursive = false;
@@ -267,8 +318,22 @@ in
       source = mkOverwriteableSymlink "kglobalshortcutsrc";
       recursive = true;
     };
+    /*
+    "autostart/org.kde.polybar.start.desktop" = {
+      source = mkDomainSymlink "./autostart/org.kde.polybar.start.desktop";
+      recursive = true;
+    };
+    */
     "autostart/org.kde.sxhkd.start.desktop" = {
       source = mkDomainSymlink "./autostart/org.kde.sxhkd.start.desktop";
+      recursive = true;
+    };
+    "plasmashellrc" = {
+      source = mkDomainSymlink "./plasma/plasmashellrc";
+      recursive = true;
+    };
+    "plasma-org.kde.plasma.desktop-appletsrc" = {
+      source = mkDomainSymlink "./plasma/plasma-org.kde.plasma.desktop-appletsrc";
       recursive = true;
     };
     "kitty/kitty.conf" = {
@@ -325,22 +390,6 @@ in
       Restart = "always";
     };
   };
-  systemd.user.services.polybar = {
-    Unit = {
-      Description = "polybar runner";
-      WantedBy = [ ];
-    };
-    Service = {
-      ExecStart = "${
-        zn.writeBashScriptBin' "polybar.launch" [ pkgs.picom ] ''
-          export PATH=${pkgs.picom}/bin:$PATH
-          picom
-        ''
-      }/bin/polybar.launch";
-      Restart = "always";
-    };
-  };
-
   systemd.user.services.sxhkd = {
     Unit = {
       Description = "sxhkd runner";
@@ -362,7 +411,7 @@ in
   fonts.fontconfig.defaultFonts.serif = [ "Liberation Serif" ];
   fonts.fontconfig.defaultFonts.sansSerif = [ "Ubuntu" ];
   fonts.fontconfig.defaultFonts.monospace = [
-    # "RecMonoCasual Nerd Font Mono"
+    "RecMonoCasual Nerd Font Mono"
     # "Lilex Nerd Font Mono"
     ### "Hurmit Nerd Font Mono"
     # "FantasqueSansM Nerd Font Mono"
@@ -377,7 +426,7 @@ in
     # "MonaspiceXe Nerd Font Mono"
     # "MonaspiceNe Nerd Font Mono"
     # "MonaspiceRn Nerd Font Mono"
-    "MonaspiceAr Nerd Font Mono"
+    # "MonaspiceAr Nerd Font Mono"
   ];
 
   programs.firefox = {

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="14"
+   height="14"
+   viewBox="0 0 14 14"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="bar_meter_horizontal.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#d1d1d1"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="false"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="-183"
+       originy="-38"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14902"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+      .ColorScheme-Text {
+      }
+      .ColorScheme-Background{
+      }
+      .ColorScheme-Highlight{
+        color: #2277bb
+      }
+      .ColorScheme-ViewText {
+      }
+      .ColorScheme-ViewBackground{
+      }
+      .ColorScheme-ViewHover {
+      }
+      .ColorScheme-ViewFocus{
+      }
+      .ColorScheme-ButtonText {
+      }
+      .ColorScheme-ButtonBackground{
+      }
+      .ColorScheme-ButtonHover {
+      }
+      .ColorScheme-ButtonFocus{
+      }
+    </style>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-183,-38)">
+    <rect
+       style="opacity:1;fill:#999999;fill-opacity:1;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.403581"
+       id="bar-inactive-center"
+       width="2"
+       height="2"
+       x="185"
+       y="40" />
+    <path
+       style="opacity:1;fill:#999999;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.403581"
+       id="bar-inactive-topright"
+       sodipodi:type="arc"
+       sodipodi:cx="187"
+       sodipodi:cy="40"
+       sodipodi:rx="2"
+       sodipodi:ry="2"
+       sodipodi:start="4.712389"
+       sodipodi:end="6.2831853"
+       sodipodi:arc-type="slice"
+       d="m 187,38 a 2,2 0 0 1 2,2 h -2 z" />
+    <rect
+       style="fill:currentColor;fill-opacity:1;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.403581"
+       id="bar-active-center"
+       width="2"
+       height="2"
+       x="193"
+       y="40"
+       class="ColorScheme-Highlight" />
+    <path
+       style="fill:currentColor;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.403581"
+       id="bar-active-topright"
+       sodipodi:type="arc"
+       sodipodi:cx="195"
+       sodipodi:cy="40"
+       sodipodi:rx="2"
+       sodipodi:ry="2"
+       sodipodi:start="4.712389"
+       sodipodi:end="6.2831853"
+       sodipodi:arc-type="slice"
+       d="m 195,38 a 2,2 0 0 1 2,2 h -2 z"
+       class="ColorScheme-Highlight" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#bar-inactive-center"
+       id="bar-inactive-top"
+       transform="translate(3.8838061e-7,-1.9999999)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#bar-inactive-center"
+       id="bar-inactive-bottom"
+       transform="translate(3.9257975e-7,2.0000001)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#bar-inactive-center"
+       id="bar-inactive-right"
+       transform="translate(2.0000004)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#bar-inactive-center"
+       id="bar-inactive-left"
+       transform="translate(-1.9999996)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#bar-inactive-topright"
+       id="bar-inactive-topleft"
+       transform="matrix(-1,0,0,1,372,0)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#bar-inactive-topright"
+       id="bar-inactive-bottomright"
+       transform="matrix(1,0,0,-1,3.9677798e-7,82)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#bar-inactive-topright"
+       id="bar-inactive-bottomleft"
+       transform="rotate(180,186,41)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#bar-active-center"
+       id="use1"
+       transform="translate(4.0937357e-7,-1.9999999)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#bar-active-center"
+       id="bar-active-bottom"
+       transform="translate(4.0937357e-7,2.0000001)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#bar-active-center"
+       id="bar-active-right"
+       transform="translate(2.0000004)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#bar-active-center"
+       id="bar-active-left"
+       transform="translate(-1.9999996)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#bar-active-topright"
+       id="bar-active-topleft"
+       transform="matrix(-1,0,0,1,388,-1.60258e-8)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#bar-active-topright"
+       id="bar-active-bottomleft"
+       transform="rotate(180,194,41)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#bar-active-topright"
+       id="bar-active-bottomright"
+       transform="matrix(1,0,0,-1,4.0937357e-7,82)" />
+    <rect
+       style="opacity:1;fill:#008080;stroke:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
+       id="hint-bar-size"
+       width="4"
+       height="4"
+       x="193"
+       y="48" />
+  </g>
+</svg>

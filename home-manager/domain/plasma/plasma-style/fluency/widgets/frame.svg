@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="26"
+   height="26"
+   viewBox="0 0 26 26"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="frame.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#d0d0d0"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="false"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     borderlayer="false"
+     inkscape:current-layer="layer1"
+     showgrid="true">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="-9"
+       originy="-19"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-9,-19)">
+    <rect
+       style="fill:#212121;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
+       id="plain-center"
+       width="16"
+       height="15.999999"
+       x="14"
+       y="24" />
+    <g
+       id="plain-top"
+       transform="translate(9,22.000001)">
+      <rect
+         style="fill:#212121;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
+         id="rect1"
+         width="16"
+         height="3.999999"
+         x="5"
+         y="-2" />
+      <rect
+         style="fill:#3a3a3a;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
+         id="rect2"
+         width="16"
+         height="1"
+         x="5"
+         y="-3" />
+    </g>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#plain-top"
+       id="plain-bottom"
+       transform="matrix(1,0,0,-1,0,64)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#plain-top"
+       id="plain-right"
+       transform="rotate(90,22,32)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#plain-top"
+       id="plain-left"
+       transform="rotate(-90,22,32)" />
+    <g
+       id="plain-topright">
+      <path
+         style="fill:#3a3a3a;fill-opacity:1;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
+         id="path2"
+         sodipodi:type="arc"
+         sodipodi:cx="30"
+         sodipodi:cy="24"
+         sodipodi:rx="5"
+         sodipodi:ry="5"
+         sodipodi:start="4.712389"
+         sodipodi:end="6.2831853"
+         sodipodi:arc-type="slice"
+         d="m 30,19 a 5,5 0 0 1 5,5 h -5 z" />
+      <path
+         style="fill:#212121;fill-opacity:1;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
+         id="path3"
+         sodipodi:type="arc"
+         sodipodi:cx="30"
+         sodipodi:cy="24"
+         sodipodi:rx="4"
+         sodipodi:ry="4"
+         sodipodi:start="4.712389"
+         sodipodi:end="6.2831853"
+         sodipodi:arc-type="slice"
+         d="m 30,20 a 4,4 0 0 1 4,4 h -4 z" />
+    </g>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#plain-topright"
+       id="plain-bottomright"
+       transform="matrix(1,0,0,-1,0,64)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#plain-topright"
+       id="plain-bottomleft"
+       transform="rotate(180,22,32)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#plain-topright"
+       id="plain-topleft"
+       transform="matrix(-1,0,0,1,44,0)" />
+  </g>
+</svg>

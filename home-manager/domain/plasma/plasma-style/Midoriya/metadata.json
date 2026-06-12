@@ -1,0 +1,19 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "ddh4r4m@gmail.com",
+                "Name": "Dharam"
+            }
+        ],
+        "Category": "",
+        "Description": "Midoriya Green Hero Theme for Plasma",
+        "EnabledByDefault": true,
+        "Id": "Midoriya",
+        "License": "LGPL",
+        "Name": "Midoriya",
+        "Version": "2.6",
+        "Website": "https://ddh4r4m.github.io"
+    },
+    "X-Plasma-API": "5.0"
+}

@@ -7,7 +7,7 @@
    viewBox="0 0 30 30.000001"
    version="1.1"
    id="svg17788"
-   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   inkscape:version="1.4.1 (93de688d07, 2025-03-30)"
    sodipodi:docname="tabbar.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,9 +25,9 @@
      inkscape:document-units="px"
      showgrid="true"
      shape-rendering="crispEdges"
-     inkscape:zoom="45.254835"
-     inkscape:cx="57.794929"
-     inkscape:cy="21.356834"
+     inkscape:zoom="32.000001"
+     inkscape:cx="61.265622"
+     inkscape:cy="24.999999"
      inkscape:current-layer="layer1">
     <inkscape:grid
        type="xygrid"
@@ -211,9 +211,9 @@
          style="fill:none;fill-opacity:1;stroke:none;stroke-width:7.5;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <rect
          class="ColorScheme-Highlight"
-         y="448.59244"
+         y="448.59241"
          x="489.66968"
-         height="3.9999974"
+         height="2.9999971"
          width="10"
          id="rect6"
          style="opacity:0.85;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:2.90474;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
@@ -230,10 +230,10 @@
          class="ColorScheme-Highlight" />
       <rect
          class="ColorScheme-Highlight"
-         y="448.59244"
-         x="483.66968"
-         height="3.9999647"
-         width="6"
+         y="448.59241"
+         x="483.66965"
+         height="2.9999952"
+         width="5.9999976"
          id="rect4"
          style="opacity:0.85;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:2.90472;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
@@ -250,8 +250,8 @@
       <rect
          class="ColorScheme-Highlight"
          y="448.59241"
-         x="499.66968"
-         height="3.9999933"
+         x="499.66965"
+         height="2.9999952"
          width="6.0000019"
          id="rect2"
          style="opacity:0.85;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:2.90473;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
@@ -277,9 +277,9 @@
          style="fill:none;fill-opacity:1;stroke:none;stroke-width:7.5;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <rect
          class="ColorScheme-Highlight"
-         y="446.59244"
+         y="447.59241"
          x="489.66968"
-         height="3.9999974"
+         height="2.9999971"
          width="10"
          id="rect8"
          style="opacity:0.85;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:2.90474;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
@@ -305,10 +305,10 @@
          class="ColorScheme-Highlight" />
       <rect
          class="ColorScheme-Highlight"
-         y="446.59241"
+         y="447.59241"
          x="483.66968"
-         height="3.9999952"
-         width="6.0000024"
+         height="2.9999971"
+         width="5.9999976"
          id="rect10"
          style="opacity:0.85;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:2.90473;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <rect
@@ -333,9 +333,9 @@
          class="ColorScheme-Highlight" />
       <rect
          class="ColorScheme-Highlight"
-         y="446.59244"
+         y="447.59241"
          x="499.66968"
-         height="3.9999666"
+         height="2.9999971"
          width="6.0000019"
          id="rect12"
          style="opacity:0.85;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:2.90473;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />

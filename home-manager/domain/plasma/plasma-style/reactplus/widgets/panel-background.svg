@@ -2,15 +2,15 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="117.00002"
-   height="122.00002"
+   width="88.116882"
+   height="62.000011"
    id="svg3642"
    sodipodi:version="0.32"
-   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   inkscape:version="1.4.1 (93de688d07, 2025-03-30)"
    sodipodi:docname="panel-background.svg"
    inkscape:output_extension="org.inkscape.output.svgz.inkscape"
    version="1.0"
-   viewBox="0 0 117.00002 122.00001"
+   viewBox="0 0 88.116883 62.00001"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.8613487"
-     inkscape:cx="60.989054"
-     inkscape:cy="83.261065"
+     inkscape:zoom="30.890789"
+     inkscape:cx="69.065895"
+     inkscape:cy="38.263833"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
@@ -42,7 +42,7 @@
      objecttolerance="23"
      gridtolerance="10"
      guidetolerance="25"
-     showguides="true"
+     showguides="false"
      inkscape:guide-bbox="true"
      inkscape:window-maximized="0"
      fit-margin-top="10"
@@ -61,8 +61,8 @@
        type="xygrid"
        id="grid6589"
        enabled="true"
-       originx="-9.9999836"
-       originy="-9.9999987"
+       originx="0"
+       originy="0"
        spacingy="1"
        spacingx="1"
        units="px"
@@ -70,6 +70,18 @@
   </sodipodi:namedview>
   <defs
      id="defs3644">
+    <linearGradient
+       id="linearGradient2"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.10372654;"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
     <style
        id="current-color-scheme"
        type="text/css">
@@ -145,7 +157,7 @@
        inkscape:collect="always" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient2-3"
+       xlink:href="#linearGradient2"
        id="linearGradient9"
        x1="322.62259"
        y1="372.37134"
@@ -154,7 +166,7 @@
        gradientUnits="userSpaceOnUse" />
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient2-3"
+       xlink:href="#linearGradient2"
        id="radialGradient11"
        cx="349.62259"
        cy="372.37134"
@@ -163,34 +175,6 @@
        r="7.5"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(2,0,0,2,-349.62259,-372.37134)" />
-    <linearGradient
-       id="linearGradient2-3"
-       inkscape:collect="always">
-      <stop
-         style="stop-color:#000000;stop-opacity:0.32236925;"
-         offset="0"
-         id="stop1-6" />
-      <stop
-         style="stop-color:#000000;stop-opacity:0.22897002;"
-         offset="0.2666721"
-         id="stop4" />
-      <stop
-         style="stop-color:#000000;stop-opacity:0.09;"
-         offset="0.46668819"
-         id="stop3" />
-      <stop
-         style="stop-color:#000000;stop-opacity:0.04;"
-         offset="0.66668004"
-         id="stop5" />
-      <stop
-         style="stop-color:#000000;stop-opacity:0;"
-         offset="0.86892033"
-         id="stop6" />
-      <stop
-         style="stop-color:#000000;stop-opacity:0;"
-         offset="1"
-         id="stop2-7" />
-    </linearGradient>
   </defs>
   <metadata
      id="metadata3647">
@@ -219,7 +203,7 @@
      inkscape:groupmode="layer"
      inkscape:label="Layer 1"
      id="layer1"
-     transform="translate(-187.62257,-302.37133)">
+     transform="translate(-177.62259,-292.37133)">
     <rect
        y="-249.62259"
        x="310.37134"
@@ -502,40 +486,40 @@
        id="mask-center"
        width="32"
        height="32"
-       x="192.62257"
-       y="377.37134" />
+       x="192.62259"
+       y="372.37134" />
     <rect
        style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:5.00004;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.799365;paint-order:stroke fill markers"
        id="mask-top"
        width="32"
        height="5"
-       x="192.62257"
-       y="372.37134" />
+       x="192.62259"
+       y="367.37134" />
     <rect
        style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:5.00004;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.799365;paint-order:stroke fill markers"
        id="mask-topright"
        width="5"
        height="5"
-       x="224.62257"
-       y="372.37134" />
+       x="224.62259"
+       y="367.37134" />
     <use
        x="0"
        y="0"
        xlink:href="#mask-top"
        id="mask-bottom"
-       transform="translate(9.4337759e-8,37)" />
+       transform="translate(9.4337993e-8,37)" />
     <use
        x="0"
        y="0"
        xlink:href="#mask-top"
        id="mask-right"
-       transform="rotate(90,208.62259,393.37132)" />
+       transform="rotate(90,208.6226,388.37133)" />
     <use
        x="0"
        y="0"
        xlink:href="#mask-top"
        id="mask-left"
-       transform="rotate(-90,208.62259,393.37132)" />
+       transform="rotate(-90,208.6226,388.37133)" />
     <use
        x="0"
        y="0"
@@ -547,7 +531,7 @@
        y="0"
        xlink:href="#mask-topright"
        id="mask-bottomright"
-       transform="translate(3.0943378e-6,37.000001)" />
+       transform="translate(3.094338e-6,37.000001)" />
     <use
        x="0"
        y="0"
@@ -587,11 +571,10 @@
        id="shadow-center"
        width="32"
        height="32"
-       x="257.62259"
-       y="377.37134" />
+       x="317.62259"
+       y="372.37134" />
     <g
-       id="shadow-topright"
-       transform="translate(-60,4.9999937)">
+       id="shadow-topright">
       <rect
          style="opacity:1;fill:url(#radialGradient11);fill-opacity:1;stroke-width:5.00003;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.799365;paint-order:stroke fill markers"
          id="rect9"
@@ -608,8 +591,7 @@
          y="367.37134" />
     </g>
     <g
-       id="shadow-top"
-       transform="translate(-60,4.9999937)">
+       id="shadow-top">
       <rect
          style="opacity:1;fill:none;fill-opacity:1;stroke-width:5.00004;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.799365;paint-order:stroke fill markers"
          id="rect6"
@@ -630,36 +612,36 @@
        y="0"
        xlink:href="#shadow-top"
        id="shadow-bottom"
-       transform="matrix(1,0,0,-1,2.7513948e-7,786.74266)" />
+       transform="matrix(1,0,0,-1,0,776.74268)" />
     <use
        x="0"
        y="0"
        xlink:href="#shadow-top"
        id="shadow-right"
-       transform="rotate(90,273.62259,393.37134)" />
+       transform="rotate(90,333.62259,388.37134)" />
     <use
        x="0"
        y="0"
        xlink:href="#shadow-top"
        id="shadow-left"
-       transform="rotate(-90,273.62259,393.37134)" />
+       transform="rotate(-90,333.62259,388.37134)" />
     <use
        x="0"
        y="0"
        xlink:href="#shadow-topright"
        id="shadow-topleft"
-       transform="matrix(-1,0,0,1,547.24518,3.9800971e-8)" />
+       transform="matrix(-1,0,0,1,667.24518,0)" />
     <use
        x="0"
        y="0"
        xlink:href="#shadow-topright"
        id="shadow-bottomright"
-       transform="matrix(1,0,0,-1,3.2751395e-6,786.74266)" />
+       transform="matrix(1,0,0,-1,2.9980468e-6,776.74268)" />
     <use
        x="0"
        y="0"
        xlink:href="#shadow-topright"
        id="shadow-bottomleft"
-       transform="rotate(180,273.62259,393.37134)" />
+       transform="rotate(180,333.62259,388.37134)" />
   </g>
 </svg>

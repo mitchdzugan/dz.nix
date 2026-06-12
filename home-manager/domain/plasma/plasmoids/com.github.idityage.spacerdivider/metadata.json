@@ -1,0 +1,20 @@
+{
+    "KPlugin": {
+        "Id": "com.github.idityage.spacerdivider",
+        "Name": "Spacer with Divider",
+        "Description": "A flexible spacer with a vertical divider line in the center",
+        "Icon": "distribute-horizontal-x",
+        "Authors": [
+            {
+                "Name": "Aditya Maurya",
+                "Email": "idityage@gmail.com"
+            }
+        ],
+        "Category": "Windows and Tasks",
+        "License": "GPL-2.0+",
+        "Version": "1.0",
+        "Website": "https://iditya.dev"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "KPackageStructure": "Plasma/Applet"
+}
