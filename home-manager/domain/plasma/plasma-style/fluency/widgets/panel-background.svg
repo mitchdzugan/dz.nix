@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="45"
+   height="45"
+   viewBox="0 0 45 45"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="panel-background.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#d0d0d0"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="false"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     borderlayer="false"
+     inkscape:current-layer="layer1"
+     showgrid="true">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:0.85;fill:#232323;stroke-width:7;stroke-linecap:round"
+       id="center"
+       width="16"
+       height="16"
+       x="1"
+       y="1" />
+    <rect
+       style="opacity:0.5;fill:#404040;stroke-width:7;stroke-linecap:round;fill-opacity:1"
+       id="top"
+       width="16"
+       height="1"
+       x="1"
+       y="0" />
+    <rect
+       style="opacity:0.5;fill:#404040;stroke-width:7;stroke-linecap:round;fill-opacity:1"
+       id="topright"
+       width="1"
+       height="1"
+       x="17"
+       y="0" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke-width:7;stroke-linecap:round;opacity:0.85"
+       id="bottom"
+       width="16"
+       height="1"
+       x="1"
+       y="17" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke-width:7;stroke-linecap:round;opacity:0.85"
+       id="right"
+       width="16"
+       height="1"
+       x="1"
+       y="-18"
+       transform="rotate(90)" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke-width:7;stroke-linecap:round;opacity:0.85"
+       id="left"
+       width="16"
+       height="1"
+       x="-17"
+       y="0"
+       transform="rotate(-90)" />
+    <rect
+       style="fill:#404040;fill-opacity:1;stroke-width:7;stroke-linecap:round;opacity:0.5"
+       id="topleft"
+       width="1"
+       height="1"
+       x="0"
+       y="0" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke-width:7;stroke-linecap:round;opacity:0.85"
+       id="bottomright"
+       width="1"
+       height="1"
+       x="17"
+       y="17" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke-width:7;stroke-linecap:round;opacity:0.85"
+       id="bottomleft"
+       width="1"
+       height="1"
+       x="0"
+       y="17" />
+    <rect
+       style="opacity:1;fill:#000000;stroke-width:7;stroke-linecap:round"
+       id="mask-center"
+       width="16"
+       height="16"
+       x="26"
+       y="1" />
+    <rect
+       style="opacity:1;fill:#000000;stroke-width:7;stroke-linecap:round"
+       id="mask-top"
+       width="16"
+       height="1"
+       x="26"
+       y="0" />
+    <rect
+       style="opacity:1;fill:#000000;stroke-width:7;stroke-linecap:round"
+       id="mask-topright"
+       width="1"
+       height="1"
+       x="42"
+       y="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#mask-top"
+       id="mask-bottom"
+       transform="translate(0,17)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#mask-top"
+       id="mask-right"
+       transform="rotate(90,34,9)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#mask-top"
+       id="mask-left"
+       transform="rotate(-90,34,9)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#mask-topright"
+       id="mask-topleft"
+       transform="translate(-17)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#mask-topright"
+       id="mask-bottomright"
+       transform="translate(0,17)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#mask-topright"
+       id="mask-bottomleft"
+       transform="translate(-17,17)" />
+    <rect
+       style="opacity:0.96;fill:none;stroke-width:7;stroke-linecap:round"
+       id="shadow-center"
+       width="16"
+       height="16"
+       x="2"
+       y="27" />
+    <rect
+       id="shadow-hint-top-margin"
+       height="1"
+       style="fill:#008080;stroke-width:0.999997"
+       width="1"
+       x="39"
+       y="40" />
+    <path
+       id="shadow-topright"
+       style="opacity:0.24;fill:#000000;stroke-width:7;stroke-linecap:round"
+       d="m 18,25 v 1 h 1 v 1 h 1 v -2 z" />
+    <rect
+       id="shadow-hint-bottom-margin"
+       height="1"
+       style="fill:#008080;stroke-width:0.999997"
+       width="1"
+       x="39"
+       y="42" />
+    <rect
+       id="shadow-hint-right-margin"
+       height="1"
+       style="fill:#008080;stroke-width:0.999997"
+       width="1"
+       x="40"
+       y="41" />
+    <rect
+       id="shadow-hint-left-margin"
+       height="1"
+       style="fill:#008080;stroke-width:0.999997"
+       width="1"
+       x="38"
+       y="41" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#shadow-top"
+       id="shadow-bottom"
+       transform="matrix(1,0,0,-1,0,70)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#shadow-top"
+       id="shadow-right"
+       transform="rotate(90,10,35)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#shadow-top"
+       id="shadow-left"
+       transform="rotate(-90,10,35)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#shadow-topright"
+       id="shadow-topleft"
+       transform="matrix(-1,0,0,1,20,0)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#shadow-topright"
+       id="shadow-bottomright"
+       transform="matrix(1,0,0,-1,0,70)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#shadow-topright"
+       id="shadow-bottomleft"
+       transform="rotate(180,10,35)" />
+    <rect
+       id="hint-top-margin"
+       height="1"
+       style="fill:#008080;stroke-width:0.999995"
+       width="1"
+       x="30"
+       y="40" />
+    <rect
+       id="hint-bottom-margin"
+       height="1"
+       style="fill:#008080;stroke-width:0.999995"
+       width="1"
+       x="30"
+       y="42" />
+    <rect
+       id="hint-right-margin"
+       height="1"
+       style="fill:#008080;stroke-width:0.999995"
+       width="1"
+       x="31"
+       y="41" />
+    <rect
+       id="hint-left-margin"
+       height="1"
+       style="fill:#008080;stroke-width:0.999995"
+       width="1"
+       x="29"
+       y="41" />
+    <g
+       id="shadow-top">
+      <rect
+         style="opacity:0.96;fill:none;stroke-width:7;stroke-linecap:round"
+         id="rect7"
+         width="16"
+         height="1"
+         x="2"
+         y="26" />
+      <rect
+         style="opacity:0.24;fill:#000000;stroke-width:7;stroke-linecap:round"
+         id="rect6"
+         width="16"
+         height="1"
+         x="2"
+         y="25" />
+    </g>
+    <rect
+       style="opacity:1;fill:#000000;stroke-width:7.00003;stroke-linecap:round"
+       id="floating-center"
+       width="6"
+       height="6"
+       x="26"
+       y="29" />
+    <rect
+       id="floating-hint-top-margin"
+       height="0.0099999998"
+       style="fill:#ff00ff;stroke-width:0.999997"
+       width="1"
+       x="39"
+       y="35" />
+    <rect
+       id="floating-hint-bottom-margin"
+       height="0.0099999998"
+       style="fill:#ff00ff;stroke-width:0.999997"
+       width="1"
+       x="39"
+       y="37" />
+    <rect
+       id="floating-hint-right-margin"
+       height="1"
+       style="fill:#ff00ff;stroke-width:0.999997"
+       width="0.0099999998"
+       x="40"
+       y="36" />
+    <rect
+       id="floating-hint-left-margin"
+       height="1"
+       style="fill:#ff00ff;stroke-width:0.999997"
+       width="0.0099999998"
+       x="38"
+       y="36" />
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+{
+    "KPackageStructure": "Plasma/Theme",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "phobian@tutanota.com",
+                "Name": "Mark Whittaker"
+            }
+        ],
+        "Category": "Plasma Theme",
+        "ServiceTypes": [
+            "Plasma/Theme"
+        ],
+        "EnabledByDefault": true,
+        "Name": "Commonality Sienna",
+        "Description": "Riffing on Solaris CDE",
+        "Id": "commonalitysienna",
+        "Version": "1.0",
+        "License": "GPL-2.0+",
+        "X-KPackage-Dependencies": [
+        ]
+    }
+}

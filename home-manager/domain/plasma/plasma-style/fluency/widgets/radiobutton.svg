@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48"
+   height="32"
+   viewBox="0 0 48 32"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="radiobutton.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#d1d1d1"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="false"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     borderlayer="false"
+     inkscape:current-layer="layer1"
+     showgrid="true">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14902"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+      .ColorScheme-Text {
+      }
+      .ColorScheme-Background{
+      }
+      .ColorScheme-Highlight{
+        color: #ccaa22
+      }
+      .ColorScheme-ViewText {
+      }
+      .ColorScheme-ViewBackground{
+      }
+      .ColorScheme-ViewHover {
+      }
+      .ColorScheme-ViewFocus{
+      }
+      .ColorScheme-ButtonText {
+      }
+      .ColorScheme-ButtonBackground{
+      }
+      .ColorScheme-ButtonHover {
+      }
+      .ColorScheme-ButtonFocus{
+      }
+    </style>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       id="hint-size"
+       cx="8"
+       cy="24"
+       r="8"
+       style="fill:#ff0000;fill-rule:evenodd" />
+    <g
+       id="normal"
+       transform="translate(-72,-25)">
+      <path
+         id="path2"
+         style="opacity:0.7;fill:#545454;fill-opacity:1;fill-rule:evenodd"
+         d="m 80,25 a 8,8 0 0 0 -8,8 8,8 0 0 0 8,8 8,8 0 0 0 8,-8 8,8 0 0 0 -8,-8 z m 0,1 a 7,7 0 0 1 7,7 7,7 0 0 1 -7,7 7,7 0 0 1 -7,-7 7,7 0 0 1 7,-7 z" />
+      <circle
+         id="circle2"
+         cx="80"
+         cy="33"
+         r="7"
+         style="opacity:0.65;fill:#3f3f3f;fill-opacity:1;fill-rule:evenodd;stroke-width:1" />
+    </g>
+    <circle
+       id="checked"
+       cx="24"
+       cy="8"
+       r="8"
+       style="fill:currentColor;fill-rule:evenodd"
+       class="ColorScheme-Highlight" />
+    <circle
+       id="symbol"
+       cx="24"
+       cy="24"
+       r="4"
+       style="fill:#e6e6e6;fill-rule:evenodd;stroke-width:1"
+       class="ColorScheme-Highlight" />
+    <path
+       id="hover"
+       style="opacity:0.2;fill:#e6e6e6;fill-opacity:1;fill-rule:evenodd"
+       d="m 40,0 a 8,8 0 0 0 -8,8 8,8 0 0 0 8,8 8,8 0 0 0 8,-8 8,8 0 0 0 -8,-8 z m 0,1 a 7,7 0 0 1 7,7 7,7 0 0 1 -7,7 7,7 0 0 1 -7,-7 7,7 0 0 1 7,-7 z" />
+  </g>
+</svg>

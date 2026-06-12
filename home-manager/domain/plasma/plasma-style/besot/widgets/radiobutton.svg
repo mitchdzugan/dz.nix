@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48.999992"
+   height="34.5"
+   viewBox="0 0 48.999992 34.5"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="radiobutton.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#d1d1d1"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="8.3046525"
+     inkscape:cx="52.019034"
+     inkscape:cy="5.2380277"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     showguides="false">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="-106"
+       originy="-145"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-105.99999,-145)">
+    <ellipse
+       id="hint-size"
+       cx="113.49999"
+       cy="152.5"
+       style="fill:#332f42;fill-opacity:1;fill-rule:evenodd;stroke-width:1.0625"
+       rx="7.4999986"
+       ry="7.5" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#normal"
+       id="checked"
+       transform="translate(14.999997)" />
+    <g
+       id="normal"
+       transform="translate(18.196698,-25.303297)">
+      <circle
+         style="fill:#f5f5f5;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers;fill-opacity:1"
+         id="circle6"
+         cx="95.303291"
+         cy="197.3033"
+         r="6.5" />
+      <g
+         id="g4">
+        <path
+           id="path1"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers"
+           d="m 100.60659,192 -0.707107,0.70711 a 6.5,6.5 0 0 1 0,9.19238 6.5,6.5 0 0 1 -9.192385,0 l -0.707106,0.70711 a 7.5,7.5 0 0 0 10.606598,0 7.5,7.5 0 0 0 0,-10.6066 z" />
+        <path
+           id="path4"
+           style="fill:#787878;fill-opacity:1;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers"
+           d="m 89.99999,202.6066 0.70711,-0.70711 a 6.5,6.5 0 0 1 0,-9.19238 6.5,6.5 0 0 1 9.192383,0 L 100.60659,192 a 7.5,7.5 0 0 0 -10.6066,0 7.5,7.5 0 0 0 0,10.6066 z" />
+      </g>
+      <path
+         id="circle4"
+         style="fill:#dedbde;fill-opacity:1;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers"
+         d="m 99.899483,192.7071 -0.707107,0.70711 a 5.5,5.5 0 0 1 0,7.77817 5.5,5.5 0 0 1 -7.778174,0 l -0.707107,0.70711 a 6.5,6.5 0 0 0 9.192388,0 6.5,6.5 0 0 0 0,-9.19239 z" />
+      <path
+         id="path6"
+         style="fill:#b8b8b8;fill-opacity:1;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers"
+         d="m 90.707095,201.89949 0.707107,-0.70711 a 5.5,5.5 0 0 1 0,-7.77817 5.5,5.5 0 0 1 7.778171,0 l 0.70711,-0.70711 a 6.5,6.5 0 0 0 -9.192388,0 6.5,6.5 0 0 0 0,9.19239 z" />
+    </g>
+    <g
+       id="hover"
+       transform="translate(52.196694,-25.303297)">
+      <circle
+         style="fill:#ebebeb;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers;fill-opacity:1"
+         id="circle8"
+         cx="95.303291"
+         cy="197.3033"
+         r="6.5" />
+      <g
+         id="g9">
+        <path
+           id="path8"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers"
+           d="m 100.60659,192 -0.707107,0.70711 a 6.5,6.5 0 0 1 0,9.19238 6.5,6.5 0 0 1 -9.192385,0 l -0.707106,0.70711 a 7.5,7.5 0 0 0 10.606598,0 7.5,7.5 0 0 0 0,-10.6066 z" />
+        <path
+           id="path9"
+           style="fill:#787878;fill-opacity:1;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers"
+           d="m 89.99999,202.6066 0.70711,-0.70711 a 6.5,6.5 0 0 1 0,-9.19238 6.5,6.5 0 0 1 9.192383,0 L 100.60659,192 a 7.5,7.5 0 0 0 -10.6066,0 7.5,7.5 0 0 0 0,10.6066 z" />
+      </g>
+      <path
+         id="path10"
+         style="fill:#dedbde;fill-opacity:1;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers"
+         d="m 99.899483,192.7071 -0.707107,0.70711 a 5.5,5.5 0 0 1 0,7.77817 5.5,5.5 0 0 1 -7.778174,0 l -0.707107,0.70711 a 6.5,6.5 0 0 0 9.192388,0 6.5,6.5 0 0 0 0,-9.19239 z" />
+      <path
+         id="path11"
+         style="fill:#b8b8b8;fill-opacity:1;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers"
+         d="m 90.707095,201.89949 0.707107,-0.70711 a 5.5,5.5 0 0 1 0,-7.77817 5.5,5.5 0 0 1 7.778171,0 l 0.70711,-0.70711 a 6.5,6.5 0 0 0 -9.192388,0 6.5,6.5 0 0 0 0,9.19239 z" />
+    </g>
+    <g
+       id="symbol"
+       transform="matrix(0.81818182,0,0,0.81818182,25.77273,25.363636)"
+       style="stroke-width:1.22222">
+      <circle
+         style="fill:#ffffda;fill-opacity:1;stroke:none;stroke-width:0.611111;paint-order:stroke fill markers"
+         id="symbol-5"
+         cx="138.99998"
+         cy="156"
+         r="6.7222223" />
+      <circle
+         style="fill:#f5c300;fill-opacity:1;stroke:none;stroke-width:0.611111;paint-order:stroke fill markers"
+         id="circle1"
+         cx="138.99998"
+         cy="156"
+         r="4.2777777" />
+    </g>
+  </g>
+</svg>

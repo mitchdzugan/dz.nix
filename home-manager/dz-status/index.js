@@ -4,6 +4,7 @@ import * as fs from "node:fs/promises";
 import path from "node:path";
 import { mkdirp } from "mkdirp";
 import envPaths from "env-paths";
+import { styleText } from "node:util";
 
 async function pageReturnsHtml(url) {
   try {

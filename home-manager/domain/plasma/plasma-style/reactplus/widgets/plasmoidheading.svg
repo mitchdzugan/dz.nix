@@ -4,7 +4,7 @@
    viewBox="0 0 112 42"
    version="1.1"
    sodipodi:docname="plasmoidheading.svg"
-   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
    width="112"
    height="42"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -40,9 +40,9 @@
      inkscape:window-height="480"
      id="namedview39"
      showgrid="true"
-     inkscape:zoom="90.509668"
-     inkscape:cx="107.541"
-     inkscape:cy="-0.77892231"
+     inkscape:zoom="45.254834"
+     inkscape:cx="5.203864"
+     inkscape:cy="42.77996"
      inkscape:current-layer="svg2"
      inkscape:pagecheckerboard="true"
      inkscape:showpageshadow="false"
@@ -151,18 +151,18 @@
     <rect
        y="50.000004"
        x="40"
-       height="0.99999976"
-       width="12.800003"
+       height="1.0000002"
+       width="19.200001"
        id="rect907"
        style="opacity:1;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:6.72717;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        class="ColorScheme-ViewFocus" />
     <rect
        y="49.000004"
        x="40"
-       height="1"
-       width="12.800001"
+       height="1.0000002"
+       width="19.200001"
        id="rect5"
-       style="opacity:1;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:6.72718;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:6.72717;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        class="ColorScheme-ButtonHover" />
   </g>
   <g
@@ -179,17 +179,17 @@
     <rect
        style="opacity:1;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:6.72717;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect915"
-       width="12.8"
-       height="0.99999976"
-       x="58.881832"
+       width="19.518169"
+       height="1"
+       x="52.481831"
        y="50.000004"
        class="ColorScheme-ViewFocus" />
     <rect
        style="opacity:1;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:6.72717;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect6"
-       width="13.11817"
-       height="0.99999976"
-       x="58.881832"
+       width="19.518169"
+       height="1"
+       x="52.481831"
        y="49.000004"
        class="ColorScheme-ButtonHover" />
   </g>
@@ -235,7 +235,7 @@
        y="46.000004"
        x="40"
        height="1.0000002"
-       width="12.8"
+       width="19.200001"
        id="rect934"
        style="opacity:1;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:6.72717;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        class="ColorScheme-ButtonHover" />
@@ -243,7 +243,7 @@
        y="47.000004"
        x="40"
        height="1.0000002"
-       width="12.8"
+       width="19.200001"
        id="rect4"
        style="opacity:1;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:6.72717;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        class="ColorScheme-ViewFocus" />
@@ -263,17 +263,17 @@
        class="ColorScheme-ButtonHover"
        style="opacity:1;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:6.72717;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect942"
-       width="12.8"
+       width="19.200001"
        height="1.0000002"
-       x="59.200001"
+       x="52.799999"
        y="46.000004" />
     <rect
        class="ColorScheme-ViewFocus"
        style="opacity:1;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:6.72717;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect3"
-       width="12.8"
+       width="19.200001"
        height="1.0000002"
-       x="59.200001"
+       x="52.799999"
        y="47.000004" />
   </g>
   <rect

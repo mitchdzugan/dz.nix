@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=Fushigi
+Name[es]=Fushigi
+Name[x-test]=xxFushigixx
+Comment=Minimalist plasma theme for your desktop | FushigiProject
+Comment[es]=Simple tema plasma para tu escritorio | FushigiProject
+Comment[x-test]=xxMinimalist plasma theme for your desktop | FushigiProjectxx
+
+
+X-KDE-PluginInfo-Author=Fernando Gomez
+X-KDE-PluginInfo-Email=me@fedoreando.com
+X-KDE-PluginInfo-Name=Fushigi
+X-KDE-PluginInfo-Version=0.4
+X-KDE-PluginInfo-Website=http://me.fedoreando.com/
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=false

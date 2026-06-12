@@ -7,7 +7,7 @@
    viewBox="0 0 47.999991 25.000008"
    version="1.1"
    id="svg8"
-   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
    sodipodi:docname="scrollbar.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="44.8"
-     inkscape:cx="38.738839"
-     inkscape:cy="4.921875"
+     inkscape:zoom="15.839192"
+     inkscape:cx="49.402773"
+     inkscape:cy="3.3461303"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -108,26 +108,26 @@
        id="background-vertical-hint-right-inset"
        height="1"
        style="opacity:1;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke-width:0.471403"
-       width="2.9999621"
-       x="-491.41095"
+       width="1.9999621"
+       x="-491.41092"
        y="628.82892" />
     <rect
        id="background-vertical-hint-top-inset"
-       height="3.0000052"
+       height="2.0000036"
        style="opacity:1;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke-width:0.471403"
        width="1"
        x="-492.41095"
-       y="625.82892" />
+       y="626.82892" />
     <rect
        id="background-vertical-hint-left-inset"
        height="1"
-       style="opacity:1;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke-width:0.471402"
-       width="3.0000381"
-       x="-495.41098"
+       style="opacity:1;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke-width:0.471403"
+       width="2.0000305"
+       x="-494.41095"
        y="628.82892" />
     <rect
        id="background-vertical-hint-bottom-inset"
-       height="2.9999976"
+       height="1.9999992"
        style="opacity:1;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke-width:0.471403"
        width="1"
        x="-492.41095"
@@ -140,8 +140,8 @@
        id="hint-scrollbar-size"
        style="opacity:0.25;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.758934;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
     <rect
-       style="opacity:0.7;fill:currentColor;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.281478;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.556098;paint-order:normal;shape-rendering:crispEdges"
-       class="ColorScheme-ButtonHover"
+       style="opacity:0.33;fill:currentColor;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.281478;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.556098;paint-order:normal;shape-rendering:crispEdges"
+       class="ColorScheme-Text"
        id="slider-center"
        width="3"
        height="3"
@@ -151,26 +151,26 @@
        id="mouseover-slider-hint-right-inset"
        height="1"
        style="opacity:1;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke-width:0.471402"
-       width="2.9999926"
-       x="-491.41092"
+       width="2.0000005"
+       x="-491.41095"
        y="618.82892" />
     <rect
        id="mouseover-slider-hint-top-inset"
-       height="3.0000024"
+       height="2.0000017"
        style="opacity:1;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke-width:0.471403"
        width="0.99999934"
        x="-492.41095"
-       y="615.82892" />
+       y="616.82892" />
     <rect
        id="mouseover-slider-hint-left-inset"
        height="1"
-       style="opacity:1;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke-width:0.471402"
-       width="3.0000381"
-       x="-495.41098"
+       style="opacity:1;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke-width:0.471403"
+       width="2.0000305"
+       x="-494.41095"
        y="618.82892" />
     <rect
        id="mouseover-slider-hint-bottom-inset"
-       height="2.9999967"
+       height="1.9999987"
        style="opacity:1;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke-width:0.471403"
        width="0.99999934"
        x="-492.41095"
@@ -179,26 +179,26 @@
        id="slider-hint-right-inset"
        height="1"
        style="opacity:1;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke-width:0.471402"
-       width="3.000015"
-       x="-501.41095"
+       width="2.0000253"
+       x="-501.41098"
        y="618.82892" />
     <rect
        id="slider-hint-top-inset"
-       height="3.0000024"
+       height="2.0000017"
        style="opacity:1;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke-width:0.471403"
        width="0.99999934"
        x="-502.41095"
-       y="615.82892" />
+       y="616.82892" />
     <rect
        id="slider-hint-left-inset"
        height="1"
-       style="opacity:1;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke-width:0.471402"
-       width="3.0000393"
-       x="-505.41098"
+       style="opacity:1;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke-width:0.471403"
+       width="2.0000315"
+       x="-504.41095"
        y="618.82892" />
     <rect
        id="slider-hint-bottom-inset"
-       height="2.9999967"
+       height="1.9999987"
        style="opacity:1;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke-width:0.471403"
        width="0.99999934"
        x="-502.41095"
@@ -252,7 +252,7 @@
        id="background-vertical-bottomright"
        transform="translate(5.9999897,6.0000015)" />
     <rect
-       style="opacity:0.75;fill:currentColor;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.281478;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.556098;paint-order:normal;shape-rendering:crispEdges"
+       style="opacity:0.85;fill:currentColor;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.281478;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.556098;paint-order:normal;shape-rendering:crispEdges"
        class="ColorScheme-Highlight"
        id="mouseover-slider-center"
        width="3"
@@ -366,7 +366,7 @@
          y="612.82892"
          class="ColorScheme-Text" />
       <rect
-         style="opacity:0.3;fill:currentColor;stroke-width:9.59998;stroke-linecap:square"
+         style="opacity:0.5;fill:currentColor;stroke-width:9.59998;stroke-linecap:square"
          id="rect1"
          width="0.99999321"
          height="0.99999934"

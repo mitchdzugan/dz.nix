@@ -19,6 +19,39 @@ super + control + grave
 super + shift + f
   kwinSh "Window Fullscreen"
 
+super + 1
+  kwinSh "Switch to Desktop 1"
+
+super + 2
+  kwinSh "Switch to Desktop 2"
+
+super + 3
+  kwinSh "Switch to Desktop 3"
+
+super + 4
+  kwinSh "Switch to Desktop 4"
+
+super + 5
+  kwinSh "Switch to Desktop 5"
+
+super + 6
+  kwinSh "Switch to Desktop 6"
+
+super + 7
+  kwinSh "Switch to Desktop 7"
+
+super + 8
+  kwinSh "Switch to Desktop 8"
+
+super + 9
+  kwinSh "Switch to Desktop 9"
+
+super + slash
+  rofi -show drun
+
+super + shift + slash
+  systemsettings
+
 # super + Up
 #   kwinSh "Window Maximize"
 

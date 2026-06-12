@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48.999992"
+   height="34.5"
+   viewBox="0 0 48.999992 34.5"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.1 (93de688d07, 2025-03-30)"
+   sodipodi:docname="radiobutton.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#d1d1d1"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="23.489104"
+     inkscape:cx="26.182352"
+     inkscape:cy="29.098598"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     showguides="false">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="-106"
+       originy="-145"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient14"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#cccccc;stop-opacity:1;"
+         offset="0"
+         id="stop14" />
+      <stop
+         style="stop-color:#e5e5e5;stop-opacity:1;"
+         offset="1"
+         id="stop15" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient14"
+       id="linearGradient15"
+       x1="110.99999"
+       y1="208"
+       x2="118.99999"
+       y2="218"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient14"
+       id="linearGradient18"
+       gradientUnits="userSpaceOnUse"
+       x1="110.99999"
+       y1="208"
+       x2="118.99999"
+       y2="218" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient14"
+       id="linearGradient3"
+       gradientUnits="userSpaceOnUse"
+       x1="110.99999"
+       y1="208"
+       x2="118.99999"
+       y2="218" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-105.99999,-145)">
+    <circle
+       id="hint-size"
+       cx="113.99999"
+       cy="153"
+       style="fill:#332f42;fill-opacity:1;fill-rule:evenodd;stroke-width:1.0625"
+       r="8" />
+    <g
+       id="checked"
+       transform="translate(14.999998,-41)">
+      <circle
+         style="fill:url(#linearGradient3);fill-opacity:1;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers"
+         id="circle1"
+         cx="114.99999"
+         cy="213"
+         r="8" />
+      <circle
+         style="fill:#1b528c;fill-opacity:1;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers"
+         id="circle2"
+         cx="114.99999"
+         cy="213"
+         r="7" />
+      <circle
+         style="fill:#f7f7f7;fill-opacity:1;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers"
+         id="circle3"
+         cx="114.99999"
+         cy="213"
+         r="6" />
+    </g>
+    <circle
+       style="opacity:1;fill:#1b528c;fill-opacity:1;stroke:none;stroke-width:0.5;paint-order:stroke fill markers"
+       id="symbol"
+       cx="138.99998"
+       cy="152.5"
+       r="3" />
+    <g
+       id="normal"
+       transform="translate(-1.0000023,-41)">
+      <circle
+         style="fill:url(#linearGradient15);fill-opacity:1;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers"
+         id="circle14"
+         cx="114.99999"
+         cy="213"
+         r="8" />
+      <circle
+         style="fill:#888888;fill-opacity:1;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers"
+         id="circle9"
+         cx="114.99999"
+         cy="213"
+         r="7" />
+      <circle
+         style="fill:#f7f7f7;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers;fill-opacity:1"
+         id="circle13"
+         cx="114.99999"
+         cy="213"
+         r="6" />
+    </g>
+    <g
+       id="hover"
+       transform="translate(31.999998,-41)">
+      <circle
+         style="fill:url(#linearGradient18);fill-opacity:1;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers"
+         id="circle16"
+         cx="114.99999"
+         cy="213"
+         r="8" />
+      <circle
+         style="fill:#1b528c;fill-opacity:1;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers"
+         id="circle17"
+         cx="114.99999"
+         cy="213"
+         r="7" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:23.9999;paint-order:stroke fill markers"
+         id="circle18"
+         cx="114.99999"
+         cy="213"
+         r="6" />
+    </g>
+  </g>
+</svg>

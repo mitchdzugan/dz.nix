@@ -1,0 +1,21 @@
+[Desktop Entry]
+Name=Stone
+Name[es]=Stone
+comment=a different theme for Plasma 5
+Comment[es]=Un tema diferente para Plasma 5
+X-KDE-PluginInfo-Author=David Linares (Mcder3)
+X-KDE-PluginInfo-Email=mcder3@gmail.com
+X-KDE-PluginInfo-Name=Testing
+X-KDE-PluginInfo-Version=1.0.0
+X-KDE-PluginInfo-Website=https://plus.google.com/u/0/115920115946572175775/
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=CC BY-ND
+X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-API=5.0
+
+[Wallpaper]
+defaultWallpaperTheme=
+defaultFileSuffix=
+defaultWidth=
+defaultHeight=
