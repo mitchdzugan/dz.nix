@@ -566,7 +566,7 @@ iconSpacing=0
 launchers=
 
 [Containments][68][General]
-AppletOrder=69;89;88;90;93;92;91;96;95;70;87;94
+AppletOrder=69;96;89;88;90;93;92;91;95;70;87;94
 
 [Containments][97]
 activityId=
@@ -814,7 +814,7 @@ extraItems=org.kde.kdeconnect,org.kde.plasma.bluetooth,org.kde.plasma.keyboardin
 knownItems=org.kde.kdeconnect,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications
 
 [Containments][97][General]
-AppletOrder=98;118;117;119;122;121;120;125;124;99;116;123
+AppletOrder=98;125;118;117;119;122;121;120;124;99;116;123
 
 [Containments2Appletsts][27][Configuration][General]
 launchers=applications:garuda-rani.desktop,applications:kitty.desktop,applications:firefox.desktop,preferred://filemanager,applications:org.kde.plasma-systemmonitor.desktop,applications:snapper-tools.desktop,applications:systemsettings.desktop,applications:octopi.desktop,applications:discord.desktop
