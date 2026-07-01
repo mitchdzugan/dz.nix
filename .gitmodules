@@ -1,3 +1,6 @@
 [submodule "__"]
 	path = __
 	url = https://github.com/mitchdzugan/__.lua
+[submodule "neovim"]
+	path = neovim
+	url = git@github.com:mitchdzugan/nvim-config.git
