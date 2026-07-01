@@ -2,6 +2,7 @@
 alignment=132
 floating=0
 panelLengthMode=0
+shell=org.kde.plasma.desktop
 
 [PlasmaViews][Panel 35][Defaults]
 offset=0
@@ -11,6 +12,7 @@ thickness=32
 alignment=132
 floating=0
 panelLengthMode=0
+shell=org.kde.plasma.desktop
 
 [PlasmaViews][Panel 68][Defaults]
 offset=0
@@ -20,6 +22,7 @@ thickness=32
 alignment=132
 floating=0
 panelLengthMode=0
+shell=org.kde.plasma.desktop
 
 [PlasmaViews][Panel 97][Defaults]
 offset=0

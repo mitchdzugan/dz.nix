@@ -121,6 +121,7 @@ in
       cava
       cloc
       dbeaver-bin
+      deno
       direnv
       unfreePkgs.dropbox
       emacs
@@ -149,7 +150,7 @@ in
       nix-prefetch-github
       nixd
       nixfmt
-      nodejs
+      nodejs_26
       pandoc
       pnpm
       prettier
