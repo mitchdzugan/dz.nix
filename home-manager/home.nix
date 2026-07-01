@@ -187,7 +187,7 @@ in
       (mkZkm "home.zkm" (get-zkm-path "home"))
       luajit
       (config.lib.nixGL.wrap pkgs.kitty)
-      (config.lib.nixGL.wrap pkgs.vesktop)
+      # (config.lib.nixGL.wrap pkgs.vesktop)
       # (config.lib.nixGL.wrap pkgs.pear-desktop)
       (config.lib.nixGL.wrap pkgs.neovide)
       (utils.mkFnlFmt luajit)
