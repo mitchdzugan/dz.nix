@@ -394,6 +394,42 @@ in
       Restart = "always";
     };
   };
+  systemd.user.services.h2h-gen = {
+    Unit = {
+      Description = "h2h-gen runner";
+      WantedBy = [ ];
+    };
+    Service = {
+      ExecStart = "${
+        zn.writeBashScriptBin' "h2h-gen.launch" [ pkgs.fish ] ''
+          export PATH=${pkgs.fish}/bin:$PATH
+          export AUTH_URL=https://h2h.public-universal-domain.org
+          export AUTH_TRUST_HOST=true
+
+          cd /home/dz/Projects/workspace.dz-ts
+
+          nix develop --command fish -c "just run-h2h-app"
+        ''
+      }/bin/h2h-gen.launch";
+      Restart = "always";
+    };
+  };
+  systemd.user.services.slippi-clm = {
+    Unit = {
+      Description = "slippi-clm updater";
+      WantedBy = [ ];
+    };
+    Service = {
+      ExecStart = "${
+        zn.writeBashScriptBin' "slippi-clm.launch" [ pkgs.fish ] ''
+          export PATH=${pkgs.fish}/bin:$PATH
+          cd /home/dz/Projects/slippi-clm.github.io
+          ${pkgs.fish}/bin/fish -c "./UPDATE_LOOPER.sh"
+        ''
+      }/bin/slippi-clm.launch";
+      Restart = "always";
+    };
+  };
   systemd.user.services.sxhkd = {
     Unit = {
       Description = "sxhkd runner";
