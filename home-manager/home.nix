@@ -166,9 +166,10 @@ in
       unzip
       vlc
       vscodium
+      vtsls
       watchexec
       # wrangler
-      yarn
+      (yarn.override { nodejs = pkgs.nodejs_26; })
       # yarn2nix
       yj
       (pkgs.callPackage ./dz-hm/default.nix { })
@@ -298,6 +299,7 @@ in
     BROWSER = "firefox";
   };
   home.pointerCursor = {
+    enable = true;
     # gtk.enable = true;
     x11.enable = true;
     package = pkgs.bibata-cursors;
@@ -496,7 +498,7 @@ in
           set -g @ukiyo-show-location "false"
           set -g @ukiyo-show-fahrenheit true
           set -g @ukiyo-ignore-window-colors true
-          set -g default-command "${pkgs.fish}/bin/fish -C 'source ./.session.fish &> /dev/null'"
+          set -g default-command "${pkgs.fish}/bin/fish -C 'source ./.session.fish &> /dev/null; or :'"
         '';
       }
     ];
@@ -593,6 +595,7 @@ in
             conform-nvim
             indent-blankline-nvim
             nvim-ts-autotag
+            unfreePkgs.vimPlugins.nvim-vtsls
 
             gitsigns-nvim
             nvim-navic

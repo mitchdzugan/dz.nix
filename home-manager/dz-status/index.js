@@ -94,11 +94,19 @@ async function getDzMediaStatus() {
   return isOnline ? STATUS.OK : STATUS.ISSUE;
 }
 
+async function getH2hAppStatus() {
+  const isOnline = await pageReturnsHtml(
+    "https://h2h.public-universal-domain.org",
+  );
+  return isOnline ? STATUS.OK : STATUS.ISSUE;
+}
+
 const Keys = {
   SlippiClm: { label: "🐸", getStatus: getSlippiClmStatus },
   Pusdb: { label: "💽", getStatus: getPusdbStatus },
   ClmStats: { label: "🔧", getStatus: getClmStatsStatus },
   DzMedia: { label: "🍿", getStatus: getDzMediaStatus },
+  H2hApp: { label: "⚔️", getStatus: getH2hAppStatus },
 };
 
 for (const k in Keys) {
@@ -156,6 +164,7 @@ async function main() {
     mkStatusLine(Keys.Pusdb.key),
     mkStatusLine(Keys.ClmStats.key),
     mkStatusLine(Keys.DzMedia.key),
+    mkStatusLine(Keys.H2hApp.key),
     Promise.resolve(" "),
   ]);
   console.log(statusLines.join(" "));

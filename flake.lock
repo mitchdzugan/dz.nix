@@ -876,11 +876,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1782839684,
-        "narHash": "sha256-vzs4SBgPsK4aNzlJR2PpFwtARazXMOxZonQnDz0YHxk=",
+        "lastModified": 1783024095,
+        "narHash": "sha256-oE+TNK98Pl7nHW4VU1oBvUKD5JR45U+py/NJmLoTNHI=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "2a37d71bbe69e1522ddabf03a4cea0374958bdbe",
+        "rev": "a4d410db95a6416d1008049330bd86b85b5db45a",
         "type": "github"
       },
       "original": {
@@ -1493,11 +1493,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1782866727,
-        "narHash": "sha256-L41S8g4mjN+B2XBgFRbq12iZFoRpT9QnSUUkHM3ju3I=",
+        "lastModified": 1783083229,
+        "narHash": "sha256-HpidwP5yzZTgqeHEz83OH2A0Mr/eGK1QZ5jb7Km/sM8=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "d959a6f7dc2917baff450e04dd893c1b8b3f71aa",
+        "rev": "cb31af41cb461d56c2b0e42ab3ea845daa41d50e",
         "type": "github"
       },
       "original": {
@@ -1694,11 +1694,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1781025328,
-        "narHash": "sha256-Fi267TtVlhI+0EHlqpsXCGi2rQsWf6oc8MMwUpafEII=",
+        "lastModified": 1783021744,
+        "narHash": "sha256-m5vlo6bmux2A/b2QILdybn2tstkH369DhPQlU3eJnis=",
         "owner": "lytedev",
         "repo": "slippi-nix",
-        "rev": "eec3b4694c92d7c03d40dc52eff8e216fc92a3eb",
+        "rev": "8d39c5955ef3a514e8449a4efe395f138bfccceb",
         "type": "github"
       },
       "original": {
