@@ -1,7 +1,7 @@
 #!/usr/bin/env zkm
 
 (defn melee
-  ([] (melee "ssbm.1_02.iso"))
+  ([] (melee "Preflight.iso"))
   ([iso-name] ["kde-inhibit"
                "--power"
                "--screenSaver"

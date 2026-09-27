@@ -44,6 +44,7 @@ SlidePaths=/usr/share/wallpapers/
 
 [Containments][1][Wallpaper][org.kde.image][General]
 Image=file:///home/dz/Pictures/Wallpapers/mountainous-landscape-overcast.jpeg
+SlidePaths=/usr/share/wallpapers/
 
 [Containments][31]
 ItemGeometries-1280x1024=
@@ -68,6 +69,7 @@ Image=file:///home/dz/Pictures/Wallpapers/mountainous-landscape-overcast.jpeg
 SlidePaths=/usr/share/wallpapers/
 
 [Containments][32]
+ItemGeometries-1536x864=
 ItemGeometries-1829x1029=
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
@@ -281,6 +283,10 @@ screenWidth=1920
 [Containments][35][Applets][64]
 immutability=1
 plugin=org.kde.plasma.userswitcher
+
+[Containments][35][Applets][64][Configuration]
+popupHeight=177
+popupWidth=216
 
 [Containments][35][Applets][64][Configuration][ConfigDialog]
 DialogHeight=630
@@ -530,6 +536,10 @@ screenWidth=1920
 immutability=1
 plugin=org.kde.plasma.userswitcher
 
+[Containments][68][Applets][94][Configuration]
+popupHeight=177
+popupWidth=216
+
 [Containments][68][Applets][94][Configuration][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
@@ -680,6 +690,10 @@ screenWidth=1920
 [Containments][97][Applets][123]
 immutability=1
 plugin=org.kde.plasma.userswitcher
+
+[Containments][97][Applets][123][Configuration]
+popupHeight=177
+popupWidth=216
 
 [Containments][97][Applets][123][Configuration][ConfigDialog]
 DialogHeight=630

@@ -159,6 +159,7 @@ in
       rlwrap
       rofi
       rust-analyzer
+      silver-searcher-ng
       sxhkd
       tree
       typescript-language-server
@@ -169,6 +170,7 @@ in
       vtsls
       watchexec
       # wrangler
+      xdelta
       (yarn.override { nodejs = pkgs.nodejs_26; })
       # yarn2nix
       yj
@@ -624,6 +626,7 @@ in
             nvim-cmp
             vim-vsnip
             vim-vsnip-integ
+            purescript-vim
 
             nvim-treesitter.withAllGrammars
             snacks-nvim
