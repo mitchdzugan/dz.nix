@@ -4,12 +4,10 @@ RightButton;NoModifier=org.kde.contextmenu
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][1]
-ItemGeometries-1536x864=
-ItemGeometries-1670x939=
+[Containments][126]
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
-activityId=6719372a-2d42-4327-8eec-e51d8887eaff
+activityId=b452a2d0-6951-4120-b368-956d467c6306
 formfactor=0
 immutability=1
 lastScreen=0
@@ -17,42 +15,16 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
-[Containments][1][Applets][36][Configuration][Appearance]
-chartFace=org.kde.ksysguard.textonly
-
-[Containments][1][Applets][36][Configuration][SensorColors]
-cpu/all/usage=247,112,103
-
-[Containments][1][Applets][38][Configuration][Appearance]
-chartFace=org.kde.ksysguard.textonly
-
-[Containments][1][Applets][38][Configuration][SensorColors]
-cpu/all/usage=247,112,103
-
-[Containments][1][Applets][47][Configuration][SensorColors]
-memory/physical/used=247,112,103
-
-[Containments][1][ConfigDialog]
-DialogHeight=824
+[Containments][126][ConfigDialog]
+DialogHeight=630
 DialogWidth=810
 
-[Containments][1][Wallpaper][a2n.blur][General]
-ActiveBlur=false
-ActiveColorColor=#000000
-Image=/home/dz/Pictures/Wallpapers/mountainous-landscape-overcast.jpeg
+[Containments][126][Wallpaper][org.kde.image][General]
+Image=file:///home/dz/Pictures/bird.1.png
 SlidePaths=/usr/share/wallpapers/
 
-[Containments][1][Wallpaper][org.kde.image][General]
-Image=file:///home/dz/Pictures/Wallpapers/mountainous-landscape-overcast.jpeg
-SlidePaths=/usr/share/wallpapers/
-
-[Containments][31]
-ItemGeometries-1280x1024=
-ItemGeometries-1536x864=
-ItemGeometries-1670x939=
-ItemGeometries-1920x1080=
-ItemGeometriesHorizontal=
-activityId=6719372a-2d42-4327-8eec-e51d8887eaff
+[Containments][129]
+activityId=b452a2d0-6951-4120-b368-956d467c6306
 formfactor=0
 immutability=1
 lastScreen=1
@@ -60,20 +32,16 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
-[Containments][31][ConfigDialog]
+[Containments][129][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
-[Containments][31][Wallpaper][org.kde.image][General]
-Image=file:///home/dz/Pictures/Wallpapers/mountainous-landscape-overcast.jpeg
+[Containments][129][Wallpaper][org.kde.image][General]
+Image=file:///home/dz/Pictures/bird.1.png
 SlidePaths=/usr/share/wallpapers/
 
-[Containments][32]
-ItemGeometries-1536x864=
-ItemGeometries-1829x1029=
-ItemGeometries-1920x1080=
-ItemGeometriesHorizontal=
-activityId=6719372a-2d42-4327-8eec-e51d8887eaff
+[Containments][130]
+activityId=b452a2d0-6951-4120-b368-956d467c6306
 formfactor=0
 immutability=1
 lastScreen=2
@@ -81,12 +49,12 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
-[Containments][32][ConfigDialog]
+[Containments][130][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
-[Containments][32][Wallpaper][org.kde.image][General]
-Image=file:///home/dz/Pictures/Wallpapers/mountainous-landscape-overcast.jpeg
+[Containments][130][Wallpaper][org.kde.image][General]
+Image=file:///home/dz/Pictures/bird.1.png
 SlidePaths=/usr/share/wallpapers/
 
 [Containments][35]
@@ -103,8 +71,8 @@ immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][35][Applets][36][Configuration]
-popupHeight=502
-popupWidth=635
+popupHeight=601
+popupWidth=739
 
 [Containments][35][Applets][36][Configuration][General]
 favoritesPortedToKAstats=true
@@ -116,8 +84,8 @@ immutability=1
 lastScreen=-1
 location=0
 plugin=org.kde.plasma.systemtray
-popupHeight=433
-popupWidth=434
+popupHeight=473
+popupWidth=474
 wallpaperplugin=org.kde.image
 
 [Containments][35][Applets][39][Applets][40]
@@ -200,8 +168,8 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][35][Applets][52][Configuration]
-popupHeight=451
-popupWidth=525
+popupHeight=459
+popupWidth=533
 
 [Containments][35][Applets][52][Configuration][Appearance]
 customDateFormat=ddd-d
@@ -213,32 +181,6 @@ fontWeight=400
 showSeconds=Always
 
 [Containments][35][Applets][52][Configuration][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
-
-[Containments][35][Applets][58]
-immutability=1
-plugin=org.kde.windowbuttons
-
-[Containments][35][Applets][58][Configuration][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
-
-[Containments][35][Applets][58][Configuration][General]
-buttonSizePercentage=75
-buttons=5|4|3|2|9|10
-containmentType=Plasma
-inactiveStateEnabled=true
-lengthFirstMargin=4
-lengthLastMargin=4
-spacing=2
-useCurrentDecoration=false
-
-[Containments][35][Applets][59]
-immutability=1
-plugin=org.kde.plasma.appmenu
-
-[Containments][35][Applets][59][Configuration][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
@@ -266,6 +208,7 @@ DialogHeight=1008
 DialogWidth=948
 
 [Containments][35][Applets][62][Configuration][General]
+_stopCava=true
 barColors={"enabled":false,"lightness":0.5,"saturation":0.5,"alpha":1,"systemColor":"linkColor","systemColorSet":"Window","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"reverseList":false,"followColor":0,"saturationEnabled":true,"lightnessEnabled":true,"sourceType":1,"smoothGradient":true,"colorsOrientation":0,"image":{"source":"","fillMode":2},"hueStart":0,"hueEnd":360}
 barGap=1
 inactiveBlockColors={"enabled":false,"lightness":0.5,"saturation":0.5,"alpha":0.3,"systemColor":"textColor","systemColorSet":"Window","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"reverseList":false,"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"sourceType":1,"smoothGradient":true,"colorsOrientation":0,"image":{"source":"","fillMode":2},"hueStart":0,"hueEnd":360}
@@ -324,13 +267,13 @@ iconSpacing=0
 launchers=
 
 [Containments][35][General]
-AppletOrder=36;67;58;59;63;62;61;66;39;52;64
+AppletOrder=36;67;63;62;61;66;39;52;64
 
 [Containments][68]
 activityId=
 formfactor=2
 immutability=1
-lastScreen=2
+lastScreen=0
 location=4
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
@@ -353,8 +296,8 @@ immutability=1
 lastScreen=-1
 location=0
 plugin=org.kde.plasma.systemtray
-popupHeight=433
-popupWidth=434
+popupHeight=445
+popupWidth=446
 wallpaperplugin=org.kde.image
 
 [Containments][68][Applets][70][Applets][71]
@@ -453,39 +396,6 @@ showSeconds=Always
 DialogHeight=630
 DialogWidth=810
 
-[Containments][68][Applets][88]
-immutability=1
-plugin=org.kde.windowtitle
-
-[Containments][68][Applets][88][Configuration][Appearance]
-activityIcon=false
-altTxt=-
-fixedLength=567
-lengthKind=2
-noIcon=true
-
-[Containments][68][Applets][88][Configuration][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
-
-[Containments][68][Applets][89]
-immutability=1
-plugin=org.kde.windowbuttons
-
-[Containments][68][Applets][89][Configuration][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
-
-[Containments][68][Applets][89][Configuration][General]
-buttonSizePercentage=75
-buttons=5|4|3|2|9|10
-containmentType=Plasma
-inactiveStateEnabled=true
-lengthFirstMargin=4
-lengthLastMargin=4
-spacing=2
-useCurrentDecoration=false
-
 [Containments][68][Applets][90]
 immutability=1
 plugin=org.kde.plasma.appmenu
@@ -576,13 +486,13 @@ iconSpacing=0
 launchers=
 
 [Containments][68][General]
-AppletOrder=69;96;89;88;90;93;92;91;95;70;87;94
+AppletOrder=69;96;90;93;92;91;95;70;87;94
 
 [Containments][97]
 activityId=
 formfactor=2
 immutability=1
-lastScreen=1
+lastScreen=0
 location=4
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
@@ -592,8 +502,8 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][97][Applets][116][Configuration]
-popupHeight=451
-popupWidth=525
+popupHeight=459
+popupWidth=533
 
 [Containments][97][Applets][116][Configuration][Appearance]
 customDateFormat=ddd-d
@@ -605,47 +515,6 @@ fontWeight=400
 showSeconds=Always
 
 [Containments][97][Applets][116][Configuration][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
-
-[Containments][97][Applets][117]
-immutability=1
-plugin=org.kde.windowtitle
-
-[Containments][97][Applets][117][Configuration][Appearance]
-activityIcon=false
-altTxt=-
-fixedLength=567
-lengthKind=2
-noIcon=true
-
-[Containments][97][Applets][117][Configuration][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
-
-[Containments][97][Applets][118]
-immutability=1
-plugin=org.kde.windowbuttons
-
-[Containments][97][Applets][118][Configuration][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
-
-[Containments][97][Applets][118][Configuration][General]
-buttonSizePercentage=75
-buttons=5|4|3|2|9|10
-containmentType=Plasma
-inactiveStateEnabled=true
-lengthFirstMargin=4
-lengthLastMargin=4
-spacing=2
-useCurrentDecoration=false
-
-[Containments][97][Applets][119]
-immutability=1
-plugin=org.kde.plasma.appmenu
-
-[Containments][97][Applets][119][Configuration][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
@@ -730,13 +599,32 @@ fill=false
 iconSpacing=0
 launchers=
 
+[Containments][97][Applets][127]
+immutability=1
+plugin=org.kde.windowbuttons
+
+[Containments][97][Applets][127][Configuration][General]
+containmentType=Plasma
+
+[Containments][97][Applets][128]
+immutability=1
+plugin=org.kde.windowtitle.Fork
+
+[Containments][97][Applets][128][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][97][Applets][128][Configuration][General]
+filterActivityInfo=false
+showIcon=false
+
 [Containments][97][Applets][98]
 immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][97][Applets][98][Configuration]
-popupHeight=502
-popupWidth=635
+popupHeight=529
+popupWidth=667
 
 [Containments][97][Applets][98][Configuration][General]
 favoritesPortedToKAstats=true
@@ -748,8 +636,8 @@ immutability=1
 lastScreen=-1
 location=0
 plugin=org.kde.plasma.systemtray
-popupHeight=433
-popupWidth=434
+popupHeight=513
+popupWidth=514
 wallpaperplugin=org.kde.image
 
 [Containments][97][Applets][99][Applets][100]
@@ -828,7 +716,7 @@ extraItems=org.kde.kdeconnect,org.kde.plasma.bluetooth,org.kde.plasma.keyboardin
 knownItems=org.kde.kdeconnect,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications
 
 [Containments][97][General]
-AppletOrder=98;125;118;117;119;122;121;120;124;99;116;123
+AppletOrder=98;125;127;128;122;121;120;124;99;116;123
 
 [Containments2Appletsts][27][Configuration][General]
 launchers=applications:garuda-rani.desktop,applications:kitty.desktop,applications:firefox.desktop,preferred://filemanager,applications:org.kde.plasma-systemmonitor.desktop,applications:snapper-tools.desktop,applications:systemsettings.desktop,applications:octopi.desktop,applications:discord.desktop

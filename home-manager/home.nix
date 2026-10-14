@@ -17,6 +17,7 @@ this:
 }:
 let
   hm-path = this.homeDirectory + "/.config/home-manager";
+  ssbm-config-path = this.homeDirectory + "/.config/ssbm";
   ow-path = hm-path + "/overwriteables";
   get-ow-path = rest: ow-path + "/" + rest;
   dz-nix-path = hm-path + "/dz.nix";
@@ -205,6 +206,9 @@ in
       (zn.writeBashScriptBin "lgvim" ''
         export DZ_NVIM_CONFIG_USE_LOCAL=no
         gvim "$@"
+      '')
+      (zn.writeBashScriptBin "slippi-launcher" ''
+        bash -c $(find ${ssbm-config-path} -type f -regex '${ssbm-config-path}/Slippi-Launcher.*\.AppImage')
       '')
       (zn.writeBashScriptBin "kwinSh" ''
         qdbus org.kde.kglobalaccel \
@@ -448,6 +452,20 @@ in
       Restart = "always";
     };
   };
+  systemd.user.services.waybar-supervisor = {
+    Unit = {
+      Description = "waybar supervisor";
+      WantedBy = [ ];
+    };
+    Service = {
+      ExecStart = "${
+        zn.writeBashScriptBin' "waybar-supervisor.launch" [ pkgs.fish ] ''
+          ${pkgs.fish}/bin/fish -c waybar
+        ''
+      }/bin/waybar-supervisor.launch";
+      Restart = "always";
+    };
+  };
 
   fonts.fontconfig.enable = true;
   fonts.fontconfig.defaultFonts.serif = [ "Liberation Serif" ];
@@ -683,6 +701,174 @@ in
     enable = true;
     enableFishIntegration = true;
     tmux.enableShellIntegration = true;
+  };
+  programs.waybar = {
+        enable = true;
+        style = builtins.readFile ./domain/hypr/waybar.style.css;
+        settings = {
+          mainBar = {
+            layer = "top";
+            position = "bottom";
+            height = 32;
+            width = null;
+            margin = "0 0 0 0";
+            spacing = 2;
+            fixed-center = true;
+            modules-left = ["hyprland/workspaces"];
+            modules-center = ["cava" "mpd"];
+            modules-right = ["backlight" "battery" "network" "pulseaudio" "tray" "clock"];
+            "hyprland/workspaces" = {
+              format = " {icon} {windows} ";
+              window-rewrite-default = "󰘔";
+              window-rewrite = {
+                "firefox" = "";
+                ".slippi-netplay-wrapped" = "";
+                "com.obsproject.Studio" = "";
+                "code-url-handler" = "󰨞";
+                "Gimp-2.10" = "";
+                "kitty" = "";
+                "wezterm" = "";
+                "discord" = "󰙯";
+                "thunar" = "";
+                "neovide" = "";
+                "glrnvim" = "";
+                "vlc" = "󰕼";
+              };
+              all-outputs = true;
+              sort-by-number = true;
+              format-icons = {
+                "1" = "1";
+                "2" = "2";
+                "3" = "3";
+                "4" = "4";
+                "5" = "5";
+                "6" = "6";
+                "7" = "7";
+                "8" = "8";
+                "9" = "9";
+                "10" = "10";
+                "focused" = "";
+                "default" = "";
+              };
+              persistent-workspaces = {
+                "*" = [1];
+                "HDMI-A-1" = [2];
+              };
+              on-scroll-up = "hyprctl dispatch workspace e+1";
+              on-scroll-down = "hyprctl dispatch workspace e-1";
+            };
+            "tray" = {
+              icon-spacing = 20;
+              spacing = 5;
+            };
+            "clock" = {
+              tooltip-format = ''
+                <big>{:%A, %d.%B %Y }</big>
+                <tt><small>{calendar}</small></tt>
+              '';
+              format = "{:%a %m/%d %I:%M:%S %p}";
+              interval = 1;
+            };
+            "backlight" = {
+              format = "{icon} {percent: >3}%";
+              format-icons = [""];
+              on-scroll-down = "brightnessctl -c backlight set 1%-";
+              on-scroll-up = "brightnessctl -c backlight set +1%";
+            };
+            "battery" = {
+              format = "{icon} {capacity: >3}%";
+              format-icons = [ "" "" "" "" "" ];
+              states = { warning = 30; critical = 15; };
+            };
+            "pulseaudio" = {
+              format = "{icon} {volume}% {format_source}";
+              format-bluetooth = "{volume}% {icon} {format_source}";
+              format-bluetooth-muted = " {icon} {format_source}";
+              format-muted = " {format_source}";
+              format-source = "";
+              format-source-muted = "";
+              format-icons = {
+                headphone = "";
+                hands-free = "";
+                headset = "";
+                phone = "";
+                portable = "";
+                car = "";
+                default = [ "" "" "" ];
+              };
+              on-click = "pavucontrol-qt";
+              on-click-right = "pactl set-source-mute @DEFAULT_SOURCE@ toggle";
+              scroll-step = 3;
+            };
+            "network" = {
+              "interface" = "wlan0";
+              "format-wifi" = "{essid} ({signalStrength}%) ";
+              "format-ethernet" = "{ipaddr}/{cidr} ";
+              "format-disconnected" = "Disconnected ⚠";
+              "interval" = 5;
+            };
+            "mpd" = {
+              format =
+                "{title} - {artist}  {stateIcon}  {elapsedTime:%M:%S}/{totalTime:%M:%S}";
+              format-disconnected = "";
+              format-stopped = "";
+              unknown-tag = "N/A";
+              interval = 2;
+              consume-icons = {
+                on = " ";
+              };
+              random-icons = {
+                on = " ";
+              };
+              repeat-icons = {
+                "on" = " ";
+              };
+              single-icons = {
+                "on" = "1 ";
+              };
+              state-icons = {
+                "paused" = "";
+                "playing" = "";
+              };
+              tooltip-format = "mpd (connected)";
+              tooltip-format-disconnected = "mpd (disconnected)";
+              on-click = "mpc toggle";
+              on-click-right = "kitty --class float_kitty sh -c ncmpcpp";
+              artist-len = 20;
+              title-len = 20;
+            };
+            "cava" = {
+              cava_config = "/home/dz/.config/cava/config";
+              hide_on_silence = true;
+              bars = 16;
+              format-icons = [
+                "<span foreground=\"#735cb8\">▁</span>"
+                "<span foreground=\"#8a5cb8\">▂</span>"
+                "<span foreground=\"#a15cb8\">▃</span>"
+                "<span foreground=\"#b85cb8\">▄</span>"
+                "<span foreground=\"#b85ca1\">▅</span>"
+                "<span foreground=\"#b85c8a\">▆</span>"
+                "<span foreground=\"#b85c73\">▇</span>"
+                "<span foreground=\"#b85c5c\">█</span>"
+              ];
+              sleep_timer = 5;
+              bar_delimiter = 0;
+              framerate = 30;
+              monstercat = false;
+              waves = false;
+              autosens = 0;
+              sensitivity = 4;
+            };
+          };
+        };
+      };
+  services.wpaperd = {
+    enable = true;
+    settings = {
+      default = {
+        path = "/home/dz/Pictures/bird.1.png";
+      };
+    };
   };
   programs.home-manager.enable = true;
 }

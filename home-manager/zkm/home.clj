@@ -2,11 +2,11 @@
 
 (defn melee
   ([] (melee "Preflight.iso"))
-  ([iso-name] ["kde-inhibit"
-               "--power"
-               "--screenSaver"
-               "--notifications"
-               "--nightLight"
+  ([iso-name] [; "kde-inhibit"
+               ; "--power"
+               ; "--screenSaver"
+               ; "--notifications"
+               ; "--nightLight"
                "gamemoderun"
                "obs-gamecapture"
                "/home/dz/.config/Slippi\\ Launcher/netplay/Slippi_Online-x86_64.AppImage"
@@ -42,7 +42,7 @@
 (Cmd :m "play melee (default iso)" (melee))
 (Cmd :a:m "play melee (select iso)" pick-melee)
 (Cmd :c:m "play melee (unclepunch)" (melee uncle-punch))
-(Cmd :s:M "open slippi launcher" "/home/dz/Downloads/Slippi-Launcher-2.13.3-x86_64.AppImage")
+(Cmd :s:M "open slippi launcher" "slippi-launcher")
 (Col)
 (Sub :k "kitty projects"
   (Cmd :n "dz-nix" (dz-nix-kitty))
