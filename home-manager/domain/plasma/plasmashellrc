@@ -1,20 +1,20 @@
-[PlasmaViews][Panel 35]
+[PlasmaViews][Panel 131]
 alignment=132
 floating=0
 panelLengthMode=0
 shell=org.kde.plasma.desktop
 
-[PlasmaViews][Panel 35][Defaults]
+[PlasmaViews][Panel 131][Defaults]
 offset=0
 thickness=32
 
-[PlasmaViews][Panel 68]
+[PlasmaViews][Panel 159]
 alignment=132
 floating=0
 panelLengthMode=0
 shell=org.kde.plasma.desktop
 
-[PlasmaViews][Panel 68][Defaults]
+[PlasmaViews][Panel 159][Defaults]
 offset=0
 thickness=32
 

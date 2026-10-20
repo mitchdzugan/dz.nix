@@ -8,7 +8,7 @@ super + w
   firefox
 
 super + space
-  fish -c home.zkm
+  fish -c "rofi -show run"
 
 super + control + Escape
   pkill -USR1 -x sxhkd

@@ -163,7 +163,7 @@ in
       silver-searcher-ng
       sxhkd
       tree
-      typescript-language-server
+      # typescript-language-server
       ueberzugpp
       unzip
       vlc
