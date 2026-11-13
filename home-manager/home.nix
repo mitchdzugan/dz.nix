@@ -76,7 +76,7 @@ let
     pkgs.nerd-fonts._3270
     pkgs.ubuntu-classic
   ];
-  zkmPkg = (config.lib.nixGL.wrap inputs.zkm.packages.${system}.zkm);
+  zkmPkg = inputs.zkm.packages.${system}.zkm;
   mkZkm =
     n: f:
     zn.writeBashScriptBin' n [ zkmPkg f ] ''
@@ -105,7 +105,7 @@ in
     sha256 = "sha256-AAAAAAAAAAAAAAAAAAAa=";
   };
   */
-  targets.genericLinux.nixGL = { packages = nixgl.packages; defaultWrapper = this.defaultNixGLWrapper; };
+  targets.genericLinux.enable = true;
   home.username = this.username;
   home.homeDirectory = this.homeDirectory;
   home.stateVersion = this.stateVersion;
@@ -181,21 +181,32 @@ in
       (pkgs.callPackage ./dz-ytmdl/default.nix { })
       (pkgs.callPackage ./slp-id/default.nix { })
       (pkgs.callPackage ./dz-status/default.nix { })
-      (config.lib.nixGL.wrap inputs.zkg.packages.${system}.zkg)
-      (config.lib.nixGL.wrap inputs.ztr.packages.${system}.ztr)
-      (config.lib.nixGL.wrap inputs.slippi.packages.${system}.slippi-netplay)
-      (config.lib.nixGL.wrap inputs.slippi.packages.${system}.slippi-playback)
+      inputs.zkg.packages.${system}.zkg
+      inputs.ztr.packages.${system}.ztr
+      inputs.slippi.packages.${system}.slippi-netplay
+      inputs.slippi.packages.${system}.slippi-playback
       inputs.slp-rec.packages.${system}.slp-rec
       inputs.yt-upload-playwright.packages.${system}.yt-upload-playwright
       zkmPkg
       (mkZkm "home.zkm" (get-zkm-path "home"))
       luajit
-      (config.lib.nixGL.wrap pkgs.kitty)
-      # (config.lib.nixGL.wrap pkgs.vesktop)
-      # (config.lib.nixGL.wrap pkgs.pear-desktop)
-      (config.lib.nixGL.wrap pkgs.neovide)
+      pkgs.kitty
+      pkgs.vesktop
+      pkgs.pear-desktop
+      pkgs.neovide
       (utils.mkFnlFmt luajit)
       (utils.mkNixWork pkgs)
+      (zn.writeBashScriptBin "xfce-compositing-on" ''
+         xfconf-query --channel=xfwm4 --property=/general/use_compositing -s true
+      '')
+      (zn.writeBashScriptBin "xfce-compositing-off" ''
+         xfconf-query --channel=xfwm4 --property=/general/use_compositing -s false
+      '')
+      (zn.writeBashScriptBin "xfce-game" ''
+        xfce-compositing-off
+        gamemoderun "$@"
+        xfce-compositing-on
+      '')
       (zn.writeBashScriptBin "lvim" ''
         export DZ_NVIM_CONFIG_USE_LOCAL=no
         nvim "$@"
@@ -466,12 +477,26 @@ in
       Restart = "always";
     };
   };
+  systemd.user.services.cortile-supervisor = {
+    Unit = {
+      Description = "cortile supervisor";
+      WantedBy = [ ];
+    };
+    Service = {
+      ExecStart = "${
+        zn.writeBashScriptBin' "cortile-supervisor.launch" [ pkgs.fish ] ''
+          ${pkgs.fish}/bin/fish -c cortile
+        ''
+      }/bin/cortile-supervisor.launch";
+      Restart = "always";
+    };
+  };
 
   fonts.fontconfig.enable = true;
   fonts.fontconfig.defaultFonts.serif = [ "Liberation Serif" ];
   fonts.fontconfig.defaultFonts.sansSerif = [ "Ubuntu" ];
   fonts.fontconfig.defaultFonts.monospace = [
-    "RecMonoCasual Nerd Font Mono"
+    # "RecMonoCasual Nerd Font Mono"
     # "Lilex Nerd Font Mono"
     ### "Hurmit Nerd Font Mono"
     # "FantasqueSansM Nerd Font Mono"
@@ -486,13 +511,13 @@ in
     # "MonaspiceXe Nerd Font Mono"
     # "MonaspiceNe Nerd Font Mono"
     # "MonaspiceRn Nerd Font Mono"
-    # "MonaspiceAr Nerd Font Mono"
+    "MonaspiceAr Nerd Font Mono"
   ];
 
   programs.firefox = {
     enable = true;
     configPath = "${config.xdg.configHome}/mozilla/firefox";
-    package = config.lib.nixGL.wrap pkgs.firefox;
+    package = pkgs.firefox;
     policies = {
       Preferences = {
         "toolkit.legacyUserProfileCustomizations.stylesheets" = {
@@ -520,11 +545,22 @@ in
         extensions.packages = with nurRepos.rycee.firefox-addons; [
           dracula-dark-colorscheme
           ublock-origin
-          # video-downloadhelper
+          video-downloadhelper
         ];
       };
     };
   };
+
+  /*
+  programs.discord = {
+    enable = true;
+    package = unfreePkgs.discord-canary;
+    configName = "discordcanary";
+    settings = {
+      SKIP_HOST_UPDATE = true;
+    };
+  };
+  */
 
   programs.tmux = {
     enable = true;

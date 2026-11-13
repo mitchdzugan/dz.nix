@@ -66,8 +66,8 @@ async function setTheme(theme) {
     xdgPath("kitty", "current-theme.conf"),
     await slurp(cfgPath("kitty", `${theme.kitty}.conf`)),
   );
-  await execa("plasma-apply-colorscheme", [theme.plasma]);
-  await execa("plasma-apply-colorscheme", ["--accent-color", theme.accent]);
+  // await execa("plasma-apply-colorscheme", [theme.plasma]);
+  // await execa("plasma-apply-colorscheme", ["--accent-color", theme.accent]);
   await execa("pkill", ["-SIGUSR1", "kitty"]);
 }
 
