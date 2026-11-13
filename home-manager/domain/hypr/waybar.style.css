@@ -1,47 +1,7 @@
-/* =============================================================================
- *
- * Waybar configuration
- *
- * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
- *
- * =========================================================================== */
-
-/* -----------------------------------------------------------------------------
- * Keyframes
- * -------------------------------------------------------------------------- */
-
-
-/*
-Polar Night
-nord0  #2e3440
-nord1  #3b4252
-nord2  #434c5e
-nord3  #4c566a
-Snow Storm
-nord4  #d8dee9
-nord5  #e5e9f0
-nord6  #eceff4
-Frost
-nord7  #8fbcbb
-nord8  #88c0d0
-nord9  #81a1c1
-nord10 #5e81ac
-Aurora
-nord11 #bf616a
-nord12 #d08770
-nord13 #ebcb8b
-nord14 #a3be8c
-nord15 #b48ead
-*/
-
-/* -----------------------------------------------------------------------------
- * Base styles
- * -------------------------------------------------------------------------- */
-
-/* Reset all styles */
+@import "./colors.css";
 
 * {
-    color: #eceff4;
+    color: @cfg;
     border: 0;
     border-radius: 0;
     padding: 0 0;
@@ -54,8 +14,15 @@ nord15 #b48ead
    }
 
 window#waybar {
-    background:rgba (0, 0, 0, 0.7);
+    background: alpha(@cbg, 0.95);
     border-radius: 0px;
+}
+
+tooltip {
+    background: @cbg;
+    border: 1px;
+    border-color: @cdim;
+    border-style: solid;
 }
 
 .modules-left, .modules-right, .modules-center {
@@ -65,27 +32,27 @@ window#waybar {
 #workspaces button {
     padding: 0px 0px;
     border-bottom: 1px;
-    color: #eceff4;
-    border-color: #555555;
+    color: @cfg;
+    border-color: @cdim;
     border-style: solid;
     margin-top:0px;
 }
 
 #workspaces button.visible {
     border-bottom: 4px;
-    border-color: #bbbbbb;
+    border-color: @cdim;
     border-style: solid;
 }
 
 #workspaces button.active {
     border-bottom: 4px;
-    border-color: #bbbbbb;
+    border-color: @cfg;
     border-style: solid;
 }
 
 #workspaces button.active.hosting-monitor {
     border-bottom: 4px;
-    border-color: #d981b9;
+    border-color: @chl;
     border-style: solid;
 }
 
@@ -106,31 +73,35 @@ window#waybar {
 
 
 #clock {
- color:#a3be8c;
+ color: @c2;
 }
 
 #backlight {
-    color: #ebcb8b;
+    color: @c3;
 }
 
 #battery {
-    color: #d8dee9;
+    color: @c4;
+}
+
+#battery.full {
+    color: @c4;
 }
 
 #battery.charging {
-    color: #81a1c1;
+    color: @c4;
 }
 
 @keyframes blink {
     to {
-        color: #4c566a;
-        background-color: #eceff4;
+        color: @c4;
+        background-color: @cbg;
     }
 }
 
 #battery.critical:not(.charging) {
-    background: #bf616a;
-    color: #eceff4;
+    background: @cbg1;
+    color: @cfg;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -139,18 +110,23 @@ window#waybar {
 }
 
 #pulseaudio {
-    color: #b48ead;
+    color: @c5;
 }
 
 #pulseaudio.muted {
-    color: #3b4252;
+    color: @cdim;
+}
+
+#network {
+    color: @c6;
 }
 
 #temperature {
-    color: #8fbcbb;
+    color: @c6;
 }
 
 #tray {
+    color: @c6;
 }
 
 #window{

@@ -16,8 +16,10 @@ this:
   ...
 }:
 let
-  hm-path = this.homeDirectory + "/.config/home-manager";
-  ssbm-config-path = this.homeDirectory + "/.config/ssbm";
+  config-dir = this.homeDirectory + "/.config";
+  hm-path = config-dir + "/home-manager";
+  ssbm-config-path = config-dir + "/ssbm";
+  waybar-colors-path = config-dir + "/waybar/colors.css";
   ow-path = hm-path + "/overwriteables";
   get-ow-path = rest: ow-path + "/" + rest;
   dz-nix-path = hm-path + "/dz.nix";
@@ -207,6 +209,18 @@ in
         gamemoderun "$@"
         xfce-compositing-on
       '')
+      (zn.writeBashScriptBin "tmuxReload" ''
+        bash -c "tmux display-message -p '#{config_files}' | tr ',' '\n' | xargs -r -I{} tmux source-file '{}'" || true
+      '')
+      (zn.writeBashScriptBin "nvimsh" ''
+        exPre="lua local out = vim.api.nvim_exec2(\""
+        exPost="\", {output = true}).output; io.stdout:write(out .. \"\n\")"
+        ex="$exPre$@$exPost"
+        nvim --headless -c "$ex"  -c 'qa!'
+      '')
+      (zn.writeBashScriptBin "setWaybarColors.css" ''
+        nvimsh DzPrintWaybarColorsCss > ${waybar-colors-path}
+      '')
       (zn.writeBashScriptBin "lvim" ''
         export DZ_NVIM_CONFIG_USE_LOCAL=no
         nvim "$@"
@@ -349,6 +363,10 @@ in
       source = mkDomainSymlink "./autostart/org.kde.sxhkd.start.desktop";
       recursive = true;
     };
+    "hypr/hyprland.lua" = {
+      source = mkDomainSymlink "./hypr/hyprland.lua";
+      recursive = true;
+    };
     "plasmashellrc" = {
       source = mkDomainSymlink "./plasma/plasmashellrc";
       recursive = true;
@@ -394,6 +412,10 @@ in
       normal = ["monospace"]
       size = 11.0
     '';
+    "waybar/style.css" = {
+      source = mkDomainSymlink "./hypr/waybar.style.css";
+      recursive = true;
+    };
   };
   systemd.user.services.pusdb = {
     Unit = {
@@ -740,7 +762,6 @@ in
   };
   programs.waybar = {
         enable = true;
-        style = builtins.readFile ./domain/hypr/waybar.style.css;
         settings = {
           mainBar = {
             layer = "top";
@@ -752,7 +773,7 @@ in
             fixed-center = true;
             modules-left = ["hyprland/workspaces"];
             modules-center = ["cava" "mpd"];
-            modules-right = ["backlight" "battery" "network" "pulseaudio" "tray" "clock"];
+            modules-right = ["backlight" "battery" "pulseaudio" "tray" "clock"];
             "hyprland/workspaces" = {
               format = " {icon} {windows} ";
               window-rewrite-default = "󰘔";
@@ -837,11 +858,16 @@ in
               scroll-step = 3;
             };
             "network" = {
-              "interface" = "wlan0";
-              "format-wifi" = "{essid} ({signalStrength}%) ";
-              "format-ethernet" = "{ipaddr}/{cidr} ";
-              "format-disconnected" = "Disconnected ⚠";
               "interval" = 5;
+              "format" = "{ifname}";
+	            "format-wifi" = "{essid} ({signalStrength}%) ";
+	            "format-ethernet" = "{ifname} ";
+	            "format-disconnected" = "";
+	            "tooltip-format" = "{ifname}";
+	            "tooltip-format-wifi" = "{essid} ({signalStrength}%) ";
+	            "tooltip-format-ethernet" = "{ifname} ";
+	            "tooltip-format-disconnected" = "Disconnected";
+	            "max-length" = 25;
             };
             "mpd" = {
               format =

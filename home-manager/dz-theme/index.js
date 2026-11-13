@@ -68,6 +68,14 @@ async function setTheme(theme) {
   );
   // await execa("plasma-apply-colorscheme", [theme.plasma]);
   // await execa("plasma-apply-colorscheme", ["--accent-color", theme.accent]);
+  const setGSetting = (ns) => (k, v) => execa("gsettings", ["set", ns, k, v]);
+  const setGDesktopSetting = setGSetting("org.gnome.desktop.interface");
+  const colorScheme = theme.isDark ? "prefer-dark" : "prefer-light";
+  await setGDesktopSetting("gtk-theme", theme.gtk);
+  await setGDesktopSetting("icon-theme", theme.icon);
+  await setGDesktopSetting("color-scheme", colorScheme);
+  await execa("setWaybarColors.css");
+  await execa("tmuxReload");
   await execa("pkill", ["-SIGUSR1", "kitty"]);
 }
 
@@ -83,6 +91,8 @@ const DEFAULT_THEME = {
   plasma: "ClayDark",
   accent: "#A85CB8",
   id: "clay-dark",
+  icon: "Tela circle dracula dark",
+  gtk: "Colloid-Pink-Dark-Catppuccin",
 };
 
 async function getCfg() {
